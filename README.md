@@ -5,7 +5,7 @@ Namco's *Battle City* (NES/Famicom, 1985), taken apart two ways:
 - **The source that plays** (`decomp/`): the cartridge's 6502 program decompiled into `game.py`, a readable, executable Python-like language. A dedicated compiler turns it into a program that runs inside a NES emulator in place of the original machine code. You can read it function by function, edit a function, recompile it in your browser and play the result.
 - **Party Edition** (`party/`): a separate JavaScript engine built from what the decompilation revealed, for up to four players on keyboard and gamepads, with 33 modes: the classic campaign, co-op, deathmatch and team modes, five story campaigns and three two-player duos.
 
-**Play it:** __SITE__ · [Party Edition](__SITE__party/) · [Source editor](__SITE__decomp/)
+**Play it:** https://battle-city.kolinko.eu/ · [Party Edition](https://battle-city.kolinko.eu/party/) · [Source editor](https://battle-city.kolinko.eu/decomp/)
 
 ![Four toy tanks in a brick maze next to a sheet of Python-style code](og.png)
 
