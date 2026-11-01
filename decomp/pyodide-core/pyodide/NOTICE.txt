@@ -1,0 +1,4 @@
+Unmodified Pyodide runtime 314.0.6.
+Runtime release and source: https://github.com/pyodide/pyodide/releases/tag/314.0.6
+License source: https://github.com/pyodide/pyodide/blob/main/LICENSE
+The included LICENSE applies to Pyodide; upstream release/source also records its dependencies.

@@ -1,0 +1,1722 @@
+[
+  {
+    "pc": "$c070",
+    "current_or_overlay_name": "reset_bootstrap_and_title_flow",
+    "reader_group": "input_and_menu",
+    "one_line_meaning": "reset bootstrap and title flow",
+    "confidence": "H",
+    "evidence": "game.bpy:64-705"
+  },
+  {
+    "pc": "$c295",
+    "current_or_overlay_name": "run_transition_cleanup_calls",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "run transition cleanup calls",
+    "confidence": "M",
+    "evidence": "game.bpy:706-717"
+  },
+  {
+    "pc": "$c2a2",
+    "current_or_overlay_name": "clear_input_when_base_state_armed",
+    "reader_group": "input_and_menu",
+    "one_line_meaning": "clear input when base state armed",
+    "confidence": "H",
+    "evidence": "game.bpy:718-743"
+  },
+  {
+    "pc": "$c2b3",
+    "current_or_overlay_name": "initialize_score_slots_then_fall_through",
+    "reader_group": "score_and_text",
+    "one_line_meaning": "initialize score slots then fall through",
+    "confidence": "H",
+    "evidence": "game.bpy:744-753"
+  },
+  {
+    "pc": "$c2bd",
+    "current_or_overlay_name": "initialize_new_game_state",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "initialize new game state",
+    "confidence": "H",
+    "evidence": "game.bpy:754-799"
+  },
+  {
+    "pc": "$c2e6",
+    "current_or_overlay_name": "update_gameplay",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "update gameplay",
+    "confidence": "H",
+    "evidence": "game.bpy:800-839"
+  },
+  {
+    "pc": "$c31d",
+    "current_or_overlay_name": "set_palette_fade_phase_from_frame",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "set palette fade phase from frame",
+    "confidence": "H",
+    "evidence": "game.bpy:840-873"
+  },
+  {
+    "pc": "$c331",
+    "current_or_overlay_name": "initialize_stage_round",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "initialize stage round",
+    "confidence": "H",
+    "evidence": "game.bpy:874-1031"
+  },
+  {
+    "pc": "$c3b5",
+    "current_or_overlay_name": "configure_demo_mode_setup",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "configure demo mode setup",
+    "confidence": "M",
+    "evidence": "game.bpy:1032-1127"
+  },
+  {
+    "pc": "$c41d",
+    "current_or_overlay_name": "run_gameplay_until_start_select",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "run gameplay until start select",
+    "confidence": "H",
+    "evidence": "game.bpy:1128-1175"
+  },
+  {
+    "pc": "$c44b",
+    "current_or_overlay_name": "run_flag_0315_wait_transition",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "run flag 0315 wait transition",
+    "confidence": "M",
+    "evidence": "game.bpy:1176-1257"
+  },
+  {
+    "pc": "$c49c",
+    "current_or_overlay_name": "run_timed_text_draw_sequence",
+    "reader_group": "score_and_text",
+    "one_line_meaning": "run timed text draw sequence",
+    "confidence": "H",
+    "evidence": "game.bpy:1258-1435"
+  },
+  {
+    "pc": "$c567",
+    "current_or_overlay_name": "wait_for_frame_low_phase",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "wait for frame low phase",
+    "confidence": "H",
+    "evidence": "game.bpy:1436-1455"
+  },
+  {
+    "pc": "$c575",
+    "current_or_overlay_name": "animate_seven_step_sprite_scroll",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "animate seven step sprite scroll",
+    "confidence": "H",
+    "evidence": "game.bpy:1456-1525"
+  },
+  {
+    "pc": "$c5b0",
+    "current_or_overlay_name": "draw_indexed_tile_at_generic_coordinates",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "draw indexed tile at generic coordinates",
+    "confidence": "H",
+    "evidence": "game.bpy:1526-1599"
+  },
+  {
+    "pc": "$c5d9",
+    "current_or_overlay_name": "run_flag_0318_wait_transition",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "run flag 0318 wait transition",
+    "confidence": "M",
+    "evidence": "game.bpy:1600-1699"
+  },
+  {
+    "pc": "$c642",
+    "current_or_overlay_name": "refresh_controller_slots_from_target_probe",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "refresh controller slots from target probe",
+    "confidence": "H",
+    "evidence": "game.bpy:1700-1870"
+  },
+  {
+    "pc": "$c6c6",
+    "current_or_overlay_name": "render_title_tank_tile",
+    "reader_group": "tanks",
+    "one_line_meaning": "render title tank tile",
+    "confidence": "H",
+    "evidence": "game.bpy:1871-1884"
+  },
+  {
+    "pc": "$c6d2",
+    "current_or_overlay_name": "move_title_tank_with_repeated_direction_input",
+    "reader_group": "tanks",
+    "one_line_meaning": "move title tank with repeated direction input",
+    "confidence": "H",
+    "evidence": "game.bpy:1885-2029"
+  },
+  {
+    "pc": "$c71e",
+    "current_or_overlay_name": "clear_results_counts",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "clear results counts",
+    "confidence": "H",
+    "evidence": "game.bpy:2030-2047"
+  },
+  {
+    "pc": "$c728",
+    "current_or_overlay_name": "return_round_continuation_status",
+    "reader_group": "score_and_text",
+    "one_line_meaning": "return round continuation status",
+    "confidence": "H",
+    "evidence": "game.bpy:2048-2109"
+  },
+  {
+    "pc": "$c7ab",
+    "current_or_overlay_name": "wait_for_title_start_select_or_timeout",
+    "reader_group": "input_and_menu",
+    "one_line_meaning": "wait for title start select or timeout",
+    "confidence": "H",
+    "evidence": "game.bpy:2110-2152"
+  },
+  {
+    "pc": "$c7c8",
+    "current_or_overlay_name": "render_lives_counter_rows",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "render lives counter rows",
+    "confidence": "H",
+    "evidence": "game.bpy:2153-2290"
+  },
+  {
+    "pc": "$c830",
+    "current_or_overlay_name": "draw_player_status_text",
+    "reader_group": "score_and_text",
+    "one_line_meaning": "draw player status text",
+    "confidence": "H",
+    "evidence": "game.bpy:2291-2342"
+  },
+  {
+    "pc": "$c859",
+    "current_or_overlay_name": "draw_stage_value_at_fixed_position",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "draw stage value at fixed position",
+    "confidence": "H",
+    "evidence": "game.bpy:2343-2398"
+  },
+  {
+    "pc": "$c894",
+    "current_or_overlay_name": "map_packed_index_to_text_coordinates",
+    "reader_group": "score_and_text",
+    "one_line_meaning": "map packed index to text coordinates",
+    "confidence": "H",
+    "evidence": "game.bpy:2399-2433"
+  },
+  {
+    "pc": "$c8a2",
+    "current_or_overlay_name": "draw_d362_text_at_packed_index",
+    "reader_group": "score_and_text",
+    "one_line_meaning": "draw d362 text at packed index",
+    "confidence": "H",
+    "evidence": "game.bpy:2434-2449"
+  },
+  {
+    "pc": "$c8b1",
+    "current_or_overlay_name": "draw_d36b_text_at_packed_index",
+    "reader_group": "score_and_text",
+    "one_line_meaning": "draw d36b text at packed index",
+    "confidence": "H",
+    "evidence": "game.bpy:2450-2465"
+  },
+  {
+    "pc": "$c8c0",
+    "current_or_overlay_name": "draw_even_d362_text_indices",
+    "reader_group": "score_and_text",
+    "one_line_meaning": "draw even d362 text indices",
+    "confidence": "H",
+    "evidence": "game.bpy:2466-2489"
+  },
+  {
+    "pc": "$c8d0",
+    "current_or_overlay_name": "clamp_tank_position_to_playfield",
+    "reader_group": "tanks",
+    "one_line_meaning": "clamp tank position to playfield",
+    "confidence": "H",
+    "evidence": "game.bpy:2490-2557"
+  },
+  {
+    "pc": "$c8f9",
+    "current_or_overlay_name": "draw_unpaused_frame_phase_sprites",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "draw unpaused frame phase sprites",
+    "confidence": "H",
+    "evidence": "game.bpy:2558-2639"
+  },
+  {
+    "pc": "$c947",
+    "current_or_overlay_name": "draw_transition_sprite_pair",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "draw transition sprite pair",
+    "confidence": "H",
+    "evidence": "game.bpy:2640-2685"
+  },
+  {
+    "pc": "$c972",
+    "current_or_overlay_name": "step_and_draw_transition_sprite",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "step and draw transition sprite",
+    "confidence": "M",
+    "evidence": "game.bpy:2686-2778"
+  },
+  {
+    "pc": "$c9b0",
+    "current_or_overlay_name": "initialize_map_render_workspace",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "initialize map render workspace",
+    "confidence": "H",
+    "evidence": "game.bpy:2779-2796"
+  },
+  {
+    "pc": "$c9c0",
+    "current_or_overlay_name": "run_game_mode_selection",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "run game mode selection",
+    "confidence": "H",
+    "evidence": "game.bpy:2797-3055"
+  },
+  {
+    "pc": "$ca6f",
+    "current_or_overlay_name": "set_spawn_parameter_5_and_enter_stage_sequence",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "set spawn parameter 5 and enter stage sequence",
+    "confidence": "M",
+    "evidence": "unit-map.json:indirect range $ca6f-$ca71; whole-source semantic read"
+  },
+  {
+    "pc": "$ca74",
+    "current_or_overlay_name": "set_spawn_parameter_7_and_enter_stage_sequence",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "set spawn parameter 7 and enter stage sequence",
+    "confidence": "M",
+    "evidence": "unit-map.json:indirect range $ca74-$ca74; whole-source semantic read"
+  },
+  {
+    "pc": "$ca7e",
+    "current_or_overlay_name": "set_spawn_parameter_7_and_enter_pregame_setup",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "set spawn parameter 7 and enter pregame setup",
+    "confidence": "M",
+    "evidence": "unit-map.json:indirect range $c0ae-$ca82; whole-source semantic read"
+  },
+  {
+    "pc": "$ca85",
+    "current_or_overlay_name": "set_menu_tank_y_from_player_count",
+    "reader_group": "tanks",
+    "one_line_meaning": "set menu tank y from player count",
+    "confidence": "H",
+    "evidence": "game.bpy:3056-3091"
+  },
+  {
+    "pc": "$ca91",
+    "current_or_overlay_name": "queue_stage_value_vram_update",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "queue stage value vram update",
+    "confidence": "M",
+    "evidence": "game.bpy:3092-3225"
+  },
+  {
+    "pc": "$caf5",
+    "current_or_overlay_name": "queue_status_vram_update",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "queue status vram update",
+    "confidence": "M",
+    "evidence": "game.bpy:3226-3340"
+  },
+  {
+    "pc": "$cb5d",
+    "current_or_overlay_name": "queue_masked_status_vram_update",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "queue masked status vram update",
+    "confidence": "H",
+    "evidence": "game.bpy:3341-3416"
+  },
+  {
+    "pc": "$cb9e",
+    "current_or_overlay_name": "queue_status_vram_variant",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "queue status vram variant",
+    "confidence": "H",
+    "evidence": "game.bpy:3417-3533"
+  },
+  {
+    "pc": "$cc08",
+    "current_or_overlay_name": "draw_two_fixed_text_rows",
+    "reader_group": "score_and_text",
+    "one_line_meaning": "draw two fixed text rows",
+    "confidence": "H",
+    "evidence": "game.bpy:3534-3565"
+  },
+  {
+    "pc": "$cc27",
+    "current_or_overlay_name": "queue_playfield_tail_block_to_vram",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "queue playfield tail block to vram",
+    "confidence": "H",
+    "evidence": "game.bpy:3566-3641"
+  },
+  {
+    "pc": "$cc5c",
+    "current_or_overlay_name": "queue_32_byte_vram_write",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "queue 32 byte vram write",
+    "confidence": "H",
+    "evidence": "game.bpy:3642-3727"
+  },
+  {
+    "pc": "$cc90",
+    "current_or_overlay_name": "animate_constant_vram_rows_incrementing",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "animate constant vram rows incrementing",
+    "confidence": "M",
+    "evidence": "game.bpy:3728-3774"
+  },
+  {
+    "pc": "$ccb2",
+    "current_or_overlay_name": "animate_pointer_vram_rows_decrementing",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "animate pointer vram rows decrementing",
+    "confidence": "M",
+    "evidence": "game.bpy:3775-3821"
+  },
+  {
+    "pc": "$ccd4",
+    "current_or_overlay_name": "run_four_slot_counter_display_loop",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "run four slot counter display loop",
+    "confidence": "M",
+    "evidence": "game.bpy:3822-4452"
+  },
+  {
+    "pc": "$cef7",
+    "current_or_overlay_name": "initialize_and_draw_status_screen",
+    "reader_group": "score_and_text",
+    "one_line_meaning": "initialize and draw status screen",
+    "confidence": "M",
+    "evidence": "game.bpy:4453-4870"
+  },
+  {
+    "pc": "$d0b8",
+    "current_or_overlay_name": "apply_four_attribute_value_blocks",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "apply four attribute value blocks",
+    "confidence": "M",
+    "evidence": "game.bpy:4871-4902"
+  },
+  {
+    "pc": "$d0d9",
+    "current_or_overlay_name": "initialize_attribute_data_tables",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "initialize attribute data tables",
+    "confidence": "H",
+    "evidence": "game.bpy:4903-4966"
+  },
+  {
+    "pc": "$d130",
+    "current_or_overlay_name": "set_attribute_value_and_emit_sprite_pair",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "set attribute value and emit sprite pair",
+    "confidence": "M",
+    "evidence": "game.bpy:4967-4976"
+  },
+  {
+    "pc": "$d138",
+    "current_or_overlay_name": "update_bonus_life_counters",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "update bonus life counters",
+    "confidence": "M",
+    "evidence": "game.bpy:4977-5054"
+  },
+  {
+    "pc": "$d16a",
+    "current_or_overlay_name": "reset_display_and_draw_common_screen",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "reset display and draw common screen",
+    "confidence": "M",
+    "evidence": "game.bpy:5055-5074"
+  },
+  {
+    "pc": "$d17f",
+    "current_or_overlay_name": "draw_title_screen",
+    "reader_group": "input_and_menu",
+    "one_line_meaning": "draw title screen",
+    "confidence": "H",
+    "evidence": "game.bpy:5075-5304"
+  },
+  {
+    "pc": "$d276",
+    "current_or_overlay_name": "repeat_attribute_update_for_frames",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "repeat attribute update for frames",
+    "confidence": "H",
+    "evidence": "game.bpy:5305-5326"
+  },
+  {
+    "pc": "$d400",
+    "current_or_overlay_name": "vblank_interrupt",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "vblank interrupt",
+    "confidence": "H",
+    "evidence": "game.bpy:5327-5421"
+  },
+  {
+    "pc": "$d44d",
+    "current_or_overlay_name": "advance_rng_state",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "advance rng state",
+    "confidence": "H",
+    "evidence": "game.bpy:5422-5481"
+  },
+  {
+    "pc": "$d467",
+    "current_or_overlay_name": "wait_vblank_and_set_ppu_control",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "wait vblank and set ppu control",
+    "confidence": "H",
+    "evidence": "game.bpy:5482-5491"
+  },
+  {
+    "pc": "$d470",
+    "current_or_overlay_name": "wait_vblank_and_disable_rendering",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "wait vblank and disable rendering",
+    "confidence": "H",
+    "evidence": "game.bpy:5492-5505"
+  },
+  {
+    "pc": "$d47e",
+    "current_or_overlay_name": "clear_ram_0400_07ff",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "clear ram 0400 07ff",
+    "confidence": "H",
+    "evidence": "game.bpy:5506-5541"
+  },
+  {
+    "pc": "$d491",
+    "current_or_overlay_name": "initialize_game_state",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "initialize game state",
+    "confidence": "H",
+    "evidence": "game.bpy:5542-5619"
+  },
+  {
+    "pc": "$d4e3",
+    "current_or_overlay_name": "copy_c040_config_to_0110",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "copy c040 config to 0110",
+    "confidence": "H",
+    "evidence": "game.bpy:5620-5644"
+  },
+  {
+    "pc": "$d4ef",
+    "current_or_overlay_name": "compare_0110_with_c040_config",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "compare 0110 with c040 config",
+    "confidence": "H",
+    "evidence": "game.bpy:5645-5684"
+  },
+  {
+    "pc": "$d502",
+    "current_or_overlay_name": "initialize_ppu_palettes",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "initialize ppu palettes",
+    "confidence": "H",
+    "evidence": "game.bpy:5685-5696"
+  },
+  {
+    "pc": "$d50e",
+    "current_or_overlay_name": "load_palette_variant",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "load palette variant",
+    "confidence": "H",
+    "evidence": "game.bpy:5697-5762"
+  },
+  {
+    "pc": "$d53e",
+    "current_or_overlay_name": "load_fixed_sprite_palette",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "load fixed sprite palette",
+    "confidence": "H",
+    "evidence": "game.bpy:5763-5794"
+  },
+  {
+    "pc": "$d5f5",
+    "current_or_overlay_name": "wait_for_vblank_flag",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "wait for vblank flag",
+    "confidence": "H",
+    "evidence": "game.bpy:5795-5804"
+  },
+  {
+    "pc": "$d5fb",
+    "current_or_overlay_name": "encode_tile_coordinates_to_ppu_address",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "encode tile coordinates to ppu address",
+    "confidence": "H",
+    "evidence": "game.bpy:5805-5859"
+  },
+  {
+    "pc": "$d612",
+    "current_or_overlay_name": "queue_attribute_table_byte_update",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "queue attribute table byte update",
+    "confidence": "H",
+    "evidence": "game.bpy:5860-5917"
+  },
+  {
+    "pc": "$d635",
+    "current_or_overlay_name": "update_attribute_quadrant_bits",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "update attribute quadrant bits",
+    "confidence": "H",
+    "evidence": "game.bpy:5918-6035"
+  },
+  {
+    "pc": "$d684",
+    "current_or_overlay_name": "shift_attribute_value_and_or_base",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "shift attribute value and or base",
+    "confidence": "H",
+    "evidence": "game.bpy:6036-6051"
+  },
+  {
+    "pc": "$d689",
+    "current_or_overlay_name": "poll_controllers",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "poll controllers",
+    "confidence": "H",
+    "evidence": "game.bpy:6052-6084"
+  },
+  {
+    "pc": "$d6b3",
+    "current_or_overlay_name": "queue_ff_terminated_vram_string",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "queue ff terminated vram string",
+    "confidence": "H",
+    "evidence": "game.bpy:6085-6158"
+  },
+  {
+    "pc": "$d6dd",
+    "current_or_overlay_name": "queue_offset_ff_terminated_vram_string",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "queue offset ff terminated vram string",
+    "confidence": "H",
+    "evidence": "game.bpy:6159-6237"
+  },
+  {
+    "pc": "$d706",
+    "current_or_overlay_name": "divide_xy_then_setup_vram_pointer",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "divide xy then setup vram pointer",
+    "confidence": "H",
+    "evidence": "game.bpy:6238-6241"
+  },
+  {
+    "pc": "$d709",
+    "current_or_overlay_name": "set_vram_pointer_from_tile_coordinates",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "set vram pointer from tile coordinates",
+    "confidence": "H",
+    "evidence": "game.bpy:6242-6253"
+  },
+  {
+    "pc": "$d713",
+    "current_or_overlay_name": "divide_xy_by_eight",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "divide xy by eight",
+    "confidence": "H",
+    "evidence": "game.bpy:6254-6295"
+  },
+  {
+    "pc": "$d71e",
+    "current_or_overlay_name": "setup_attribute_mask_from_coordinates",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "setup attribute mask from coordinates",
+    "confidence": "M",
+    "evidence": "game.bpy:6296-6303"
+  },
+  {
+    "pc": "$d725",
+    "current_or_overlay_name": "compute_attribute_quadrant_mask",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "compute attribute quadrant mask",
+    "confidence": "H",
+    "evidence": "game.bpy:6304-6346"
+  },
+  {
+    "pc": "$d73c",
+    "current_or_overlay_name": "test_cell_high_nibble_with_mask",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "test cell high nibble with mask",
+    "confidence": "M",
+    "evidence": "game.bpy:6347-6359"
+  },
+  {
+    "pc": "$d743",
+    "current_or_overlay_name": "clear_cell_mask_and_queue_update",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "clear cell mask and queue update",
+    "confidence": "H",
+    "evidence": "game.bpy:6360-6374"
+  },
+  {
+    "pc": "$d74d",
+    "current_or_overlay_name": "clear_cell_mask_if_high_nibble_present",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "clear cell mask if high nibble present",
+    "confidence": "H",
+    "evidence": "game.bpy:6375-6406"
+  },
+  {
+    "pc": "$d764",
+    "current_or_overlay_name": "set_cell_mask_if_high_nibble_present",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "set cell mask if high nibble present",
+    "confidence": "H",
+    "evidence": "game.bpy:6407-6436"
+  },
+  {
+    "pc": "$d771",
+    "current_or_overlay_name": "write_pointed_cell_to_ppu",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "write pointed cell to ppu",
+    "confidence": "H",
+    "evidence": "game.bpy:6437-6464"
+  },
+  {
+    "pc": "$d784",
+    "current_or_overlay_name": "store_cell_and_queue_single_vram_update",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "store cell and queue single vram update",
+    "confidence": "H",
+    "evidence": "game.bpy:6465-6529"
+  },
+  {
+    "pc": "$d7aa",
+    "current_or_overlay_name": "add_a_to_word_11_12",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "add a to word 11 12",
+    "confidence": "H",
+    "evidence": "game.bpy:6530-6552"
+  },
+  {
+    "pc": "$d7b4",
+    "current_or_overlay_name": "repeat_d771_over_0400_to_07ff",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "repeat d771 over 0400 to 07ff",
+    "confidence": "H",
+    "evidence": "game.bpy:6553-6584"
+  },
+  {
+    "pc": "$d7cc",
+    "current_or_overlay_name": "initialize_ram_and_clear_generated_blocks",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "initialize ram and clear generated blocks",
+    "confidence": "M",
+    "evidence": "game.bpy:6585-6683"
+  },
+  {
+    "pc": "$d80b",
+    "current_or_overlay_name": "render_four_table_selected_parts",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "render four table selected parts",
+    "confidence": "M",
+    "evidence": "game.bpy:6684-6791"
+  },
+  {
+    "pc": "$d85e",
+    "current_or_overlay_name": "read_eight_ppu_bytes_and_process_bits",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "read eight ppu bytes and process bits",
+    "confidence": "M",
+    "evidence": "game.bpy:6792-6954"
+  },
+  {
+    "pc": "$d8d2",
+    "current_or_overlay_name": "process_consecutive_ff_source_entries",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "process consecutive ff source entries",
+    "confidence": "M",
+    "evidence": "game.bpy:6955-7014"
+  },
+  {
+    "pc": "$d8f6",
+    "current_or_overlay_name": "wait_next_frame",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "wait next frame",
+    "confidence": "H",
+    "evidence": "game.bpy:7015-7025"
+  },
+  {
+    "pc": "$d8fd",
+    "current_or_overlay_name": "flush_vram_buffer",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "flush vram buffer",
+    "confidence": "H",
+    "evidence": "game.bpy:7026-7120"
+  },
+  {
+    "pc": "$d934",
+    "current_or_overlay_name": "scan_zero_page_to_zero_or_ff",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "scan zero page to zero or ff",
+    "confidence": "H",
+    "evidence": "game.bpy:7121-7174"
+  },
+  {
+    "pc": "$d951",
+    "current_or_overlay_name": "configure_and_process_data_after_zero_prefix",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "configure and process data after zero prefix",
+    "confidence": "M",
+    "evidence": "game.bpy:7175-7234"
+  },
+  {
+    "pc": "$d97d",
+    "current_or_overlay_name": "compare_and_conditionally_copy_two_7byte_arrays",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "compare and conditionally copy two 7byte arrays",
+    "confidence": "H",
+    "evidence": "game.bpy:7235-7348"
+  },
+  {
+    "pc": "$d9be",
+    "current_or_overlay_name": "add_seven_decimal_digits",
+    "reader_group": "score_and_text",
+    "one_line_meaning": "add seven decimal digits",
+    "confidence": "H",
+    "evidence": "game.bpy:7349-7433"
+  },
+  {
+    "pc": "$d9e1",
+    "current_or_overlay_name": "initialize_score_increment_record",
+    "reader_group": "score_and_text",
+    "one_line_meaning": "initialize score increment record",
+    "confidence": "M",
+    "evidence": "game.bpy:7434-7485"
+  },
+  {
+    "pc": "$d9fe",
+    "current_or_overlay_name": "clear_seven_bytes_set_ff_sentinel",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "clear seven bytes set ff sentinel",
+    "confidence": "H",
+    "evidence": "game.bpy:7486-7509"
+  },
+  {
+    "pc": "$da13",
+    "current_or_overlay_name": "store_value_as_tens_and_ones",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "store value as tens and ones",
+    "confidence": "H",
+    "evidence": "game.bpy:7510-7548"
+  },
+  {
+    "pc": "$da2b",
+    "current_or_overlay_name": "emit_sprite",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "emit sprite",
+    "confidence": "H",
+    "evidence": "game.bpy:7549-7644"
+  },
+  {
+    "pc": "$da64",
+    "current_or_overlay_name": "emit_sprite_with_tile_plus_twice_a",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "emit sprite with tile plus twice a",
+    "confidence": "H",
+    "evidence": "game.bpy:7645-7677"
+  },
+  {
+    "pc": "$da73",
+    "current_or_overlay_name": "add_eight_times_a_to_tile_then_emit_pair",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "add eight times a to tile then emit pair",
+    "confidence": "H",
+    "evidence": "game.bpy:7678-7704"
+  },
+  {
+    "pc": "$da7b",
+    "current_or_overlay_name": "emit_horizontal_sprite_pair",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "emit horizontal sprite pair",
+    "confidence": "H",
+    "evidence": "game.bpy:7705-7738"
+  },
+  {
+    "pc": "$da93",
+    "current_or_overlay_name": "hide_unused_sprites",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "hide unused sprites",
+    "confidence": "H",
+    "evidence": "game.bpy:7739-7789"
+  },
+  {
+    "pc": "$daaf",
+    "current_or_overlay_name": "comparison_flags_to_signed_unit",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "comparison flags to signed unit",
+    "confidence": "H",
+    "evidence": "game.bpy:7790-7811"
+  },
+  {
+    "pc": "$db0b",
+    "current_or_overlay_name": "update_0311_from_two_slot_idle_checks",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "update 0311 from two slot idle checks",
+    "confidence": "M",
+    "evidence": "game.bpy:7812-7869"
+  },
+  {
+    "pc": "$db38",
+    "current_or_overlay_name": "test_slot_no_directional_input_and_no_tank_state",
+    "reader_group": "tanks",
+    "one_line_meaning": "test slot no directional input and no tank state",
+    "confidence": "H",
+    "evidence": "game.bpy:7870-7895"
+  },
+  {
+    "pc": "$db48",
+    "current_or_overlay_name": "tick_enemy_spawn",
+    "reader_group": "tanks",
+    "one_line_meaning": "tick enemy spawn",
+    "confidence": "H",
+    "evidence": "game.bpy:7896-7938"
+  },
+  {
+    "pc": "$db75",
+    "current_or_overlay_name": "apply_player_direction",
+    "reader_group": "input_and_menu",
+    "one_line_meaning": "apply player direction",
+    "confidence": "H",
+    "evidence": "game.bpy:7939-8017"
+  },
+  {
+    "pc": "$dbf0",
+    "current_or_overlay_name": "return_from_player_direction_update",
+    "reader_group": "input_and_menu",
+    "one_line_meaning": "return from player direction update",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $dbf0-$dbf0; whole-source semantic read"
+  },
+  {
+    "pc": "$dbf1",
+    "current_or_overlay_name": "tick_tank_states",
+    "reader_group": "tanks",
+    "one_line_meaning": "tick tank states",
+    "confidence": "H",
+    "evidence": "game.bpy:8022-8078"
+  },
+  {
+    "pc": "$dc3d",
+    "current_or_overlay_name": "dispatch_tank_state_handler",
+    "reader_group": "tanks",
+    "one_line_meaning": "dispatch tank state handler",
+    "confidence": "H",
+    "evidence": "game.bpy:8079-8591"
+  },
+  {
+    "pc": "$dc52",
+    "current_or_overlay_name": "decrement_tank_state_phase",
+    "reader_group": "tanks",
+    "one_line_meaning": "decrement tank state phase",
+    "confidence": "M",
+    "evidence": "unit-map.json:indirect range $dc52-$dc7b; whole-source semantic read"
+  },
+  {
+    "pc": "$dc7c",
+    "current_or_overlay_name": "maybe_retarget_aligned_tank",
+    "reader_group": "tanks",
+    "one_line_meaning": "maybe retarget aligned tank",
+    "confidence": "M",
+    "evidence": "unit-map.json:indirect range $dc7c-$dc96; whole-source semantic read"
+  },
+  {
+    "pc": "$dd48",
+    "current_or_overlay_name": "randomize_tank_direction_or_retarget",
+    "reader_group": "tanks",
+    "one_line_meaning": "randomize tank direction or retarget",
+    "confidence": "M",
+    "evidence": "unit-map.json:indirect range $dd48-$dd6d; whole-source semantic read"
+  },
+  {
+    "pc": "$dd6e",
+    "current_or_overlay_name": "decrement_a_if_at_least_56",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "decrement a if at least 56",
+    "confidence": "H",
+    "evidence": "game.bpy:8592-8613"
+  },
+  {
+    "pc": "$dd76",
+    "current_or_overlay_name": "decrement_a_if_at_least_57",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "decrement a if at least 57",
+    "confidence": "H",
+    "evidence": "game.bpy:8614-8677"
+  },
+  {
+    "pc": "$dd7e",
+    "current_or_overlay_name": "target_tank_zero_position_and_choose_state",
+    "reader_group": "tanks",
+    "one_line_meaning": "target tank zero position and choose state",
+    "confidence": "M",
+    "evidence": "unit-map.json:indirect range $dd7e-$dd86; whole-source semantic read"
+  },
+  {
+    "pc": "$dd89",
+    "current_or_overlay_name": "target_secondary_player_position_and_choose_state",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "target secondary player position and choose state",
+    "confidence": "M",
+    "evidence": "unit-map.json:indirect range $dd89-$dd91; whole-source semantic read"
+  },
+  {
+    "pc": "$dd94",
+    "current_or_overlay_name": "target_fixed_center_position_and_choose_state",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "target fixed center position and choose state",
+    "confidence": "M",
+    "evidence": "unit-map.json:indirect range $dd94-$dd9a; whole-source semantic read"
+  },
+  {
+    "pc": "$dda2",
+    "current_or_overlay_name": "map_target_tank_delta_to_direction_value",
+    "reader_group": "tanks",
+    "one_line_meaning": "map target tank delta to direction value",
+    "confidence": "M",
+    "evidence": "game.bpy:8678-8950"
+  },
+  {
+    "pc": "$ddea",
+    "current_or_overlay_name": "advance_tank_destruction_state",
+    "reader_group": "tanks",
+    "one_line_meaning": "advance tank destruction state",
+    "confidence": "M",
+    "evidence": "unit-map.json:indirect range $ddea-$de45; whole-source semantic read"
+  },
+  {
+    "pc": "$de46",
+    "current_or_overlay_name": "set_transition_vector_and_reset_frame",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "set transition vector and reset frame",
+    "confidence": "H",
+    "evidence": "game.bpy:8951-9014"
+  },
+  {
+    "pc": "$de55",
+    "current_or_overlay_name": "increment_tank_state_until_e0",
+    "reader_group": "tanks",
+    "one_line_meaning": "increment tank state until e0",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $de55-$de63; whole-source semantic read"
+  },
+  {
+    "pc": "$de64",
+    "current_or_overlay_name": "increment_tank_state_and_finalize_phase",
+    "reader_group": "tanks",
+    "one_line_meaning": "increment tank state and finalize phase",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $de64-$de71; whole-source semantic read"
+  },
+  {
+    "pc": "$de72",
+    "current_or_overlay_name": "select_tank_action_from_timer_and_frame",
+    "reader_group": "tanks",
+    "one_line_meaning": "select tank action from timer and frame",
+    "confidence": "M",
+    "evidence": "game.bpy:9015-9103"
+  },
+  {
+    "pc": "$dea6",
+    "current_or_overlay_name": "dispatch_all_eight_tank_render_handlers",
+    "reader_group": "tanks",
+    "one_line_meaning": "dispatch all eight tank render handlers",
+    "confidence": "H",
+    "evidence": "game.bpy:9104-9130"
+  },
+  {
+    "pc": "$deb8",
+    "current_or_overlay_name": "dispatch_tank_sprite_handler",
+    "reader_group": "tanks",
+    "one_line_meaning": "dispatch tank sprite handler",
+    "confidence": "H",
+    "evidence": "game.bpy:9131-9197"
+  },
+  {
+    "pc": "$decd",
+    "current_or_overlay_name": "render_tank_from_state",
+    "reader_group": "tanks",
+    "one_line_meaning": "render tank from state",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $decd-$dee1; whole-source semantic read"
+  },
+  {
+    "pc": "$dee2",
+    "current_or_overlay_name": "transform_state_nibble_to_tile_offset",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "transform state nibble to tile offset",
+    "confidence": "H",
+    "evidence": "game.bpy:9198-9247"
+  },
+  {
+    "pc": "$def0",
+    "current_or_overlay_name": "emit_sprite_pair_with_a_plus_f1_tile",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "emit sprite pair with a plus f1 tile",
+    "confidence": "H",
+    "evidence": "game.bpy:9248-9508"
+  },
+  {
+    "pc": "$defd",
+    "current_or_overlay_name": "render_tank_by_attribute_mode",
+    "reader_group": "tanks",
+    "one_line_meaning": "render tank by attribute mode",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $defd-$df32; whole-source semantic read"
+  },
+  {
+    "pc": "$df33",
+    "current_or_overlay_name": "render_tank_offset_effect",
+    "reader_group": "tanks",
+    "one_line_meaning": "render tank offset effect",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $df33-$df45; whole-source semantic read"
+  },
+  {
+    "pc": "$df46",
+    "current_or_overlay_name": "render_four_quadrant_tank_effect",
+    "reader_group": "tanks",
+    "one_line_meaning": "render four quadrant tank effect",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $df46-$df98; whole-source semantic read"
+  },
+  {
+    "pc": "$df99",
+    "current_or_overlay_name": "prepare_tank_sprite_tile_and_position",
+    "reader_group": "tanks",
+    "one_line_meaning": "prepare tank sprite tile and position",
+    "confidence": "H",
+    "evidence": "game.bpy:9509-9764"
+  },
+  {
+    "pc": "$dfb6",
+    "current_or_overlay_name": "render_tank_body_with_frame_selection",
+    "reader_group": "tanks",
+    "one_line_meaning": "render tank body with frame selection",
+    "confidence": "M",
+    "evidence": "unit-map.json:indirect range $dfb6-$e002; whole-source semantic read"
+  },
+  {
+    "pc": "$e00b",
+    "current_or_overlay_name": "render_tank_state_offset_sprite",
+    "reader_group": "tanks",
+    "one_line_meaning": "render tank state offset sprite",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $e00b-$e02d; whole-source semantic read"
+  },
+  {
+    "pc": "$e02e",
+    "current_or_overlay_name": "tick_projectile_motion",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "tick projectile motion",
+    "confidence": "H",
+    "evidence": "game.bpy:9765-9779"
+  },
+  {
+    "pc": "$e03c",
+    "current_or_overlay_name": "dispatch_bullet_state_handler",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "dispatch bullet state handler",
+    "confidence": "H",
+    "evidence": "game.bpy:9780-9844"
+  },
+  {
+    "pc": "$e051",
+    "current_or_overlay_name": "move_projectile_with_optional_second_step",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "move projectile with optional second step",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $e051-$e062; whole-source semantic read"
+  },
+  {
+    "pc": "$e063",
+    "current_or_overlay_name": "move_bullet_by_direction",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "move bullet by direction",
+    "confidence": "H",
+    "evidence": "game.bpy:9845-9929"
+  },
+  {
+    "pc": "$e076",
+    "current_or_overlay_name": "decrement_projectile_state_phase",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "decrement projectile state phase",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $e076-$e08b; whole-source semantic read"
+  },
+  {
+    "pc": "$e08c",
+    "current_or_overlay_name": "spawn_projectile_if_slot_free",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "spawn projectile if slot free",
+    "confidence": "H",
+    "evidence": "game.bpy:9930-9977"
+  },
+  {
+    "pc": "$e0d8",
+    "current_or_overlay_name": "dispatch_bullet_render_handlers",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "dispatch bullet render handlers",
+    "confidence": "M",
+    "evidence": "game.bpy:9978-9998"
+  },
+  {
+    "pc": "$e0e6",
+    "current_or_overlay_name": "dispatch_bullet_render_state",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "dispatch bullet render state",
+    "confidence": "H",
+    "evidence": "game.bpy:9999-10093"
+  },
+  {
+    "pc": "$e0fb",
+    "current_or_overlay_name": "render_projectile_pair",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "render projectile pair",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $e0fb-$e111; whole-source semantic read"
+  },
+  {
+    "pc": "$e112",
+    "current_or_overlay_name": "render_projectile_state_effect",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "render projectile state effect",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $e112-$e121; whole-source semantic read"
+  },
+  {
+    "pc": "$e122",
+    "current_or_overlay_name": "handle_player_fire_input",
+    "reader_group": "input_and_menu",
+    "one_line_meaning": "handle player fire input",
+    "confidence": "H",
+    "evidence": "game.bpy:10094-10141"
+  },
+  {
+    "pc": "$e162",
+    "current_or_overlay_name": "spawn_random_enemy_projectiles",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "spawn random enemy projectiles",
+    "confidence": "H",
+    "evidence": "game.bpy:10142-10168"
+  },
+  {
+    "pc": "$e181",
+    "current_or_overlay_name": "mark_tank_occupied_map_cells",
+    "reader_group": "tanks",
+    "one_line_meaning": "mark tank occupied map cells",
+    "confidence": "M",
+    "evidence": "game.bpy:10169-10337"
+  },
+  {
+    "pc": "$e1f3",
+    "current_or_overlay_name": "set_map_cell_high_bit",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "set map cell high bit",
+    "confidence": "H",
+    "evidence": "game.bpy:10338-10354"
+  },
+  {
+    "pc": "$e1fa",
+    "current_or_overlay_name": "clear_tank_occupied_map_cells",
+    "reader_group": "tanks",
+    "one_line_meaning": "clear tank occupied map cells",
+    "confidence": "M",
+    "evidence": "game.bpy:10355-10431"
+  },
+  {
+    "pc": "$e234",
+    "current_or_overlay_name": "clear_map_cell_high_bit",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "clear map cell high bit",
+    "confidence": "H",
+    "evidence": "game.bpy:10432-10448"
+  },
+  {
+    "pc": "$e23b",
+    "current_or_overlay_name": "update_powerup_lifetime_and_render",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "Decrement an active powerup lifetime, hide it at expiry, or render its phase-selected sprite.",
+    "confidence": "H",
+    "evidence": "freeze-1/game.bpy:5108-5240"
+  },
+  {
+    "pc": "$e27c",
+    "current_or_overlay_name": "update_tank_flash_rendering",
+    "reader_group": "tanks",
+    "one_line_meaning": "update tank flash rendering",
+    "confidence": "M",
+    "evidence": "game.bpy:10544-10614"
+  },
+  {
+    "pc": "$e2a9",
+    "current_or_overlay_name": "update_round_transition_countdowns_and_dispatch",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "Advance display and round transition countdowns, then dispatch the selected center animation.",
+    "confidence": "H",
+    "evidence": "freeze-1/game.bpy:5108-5240"
+  },
+  {
+    "pc": "$e312",
+    "current_or_overlay_name": "draw_center_animation_tile_f1",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "draw center animation tile f1",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $e312-$e314; whole-source semantic read"
+  },
+  {
+    "pc": "$e317",
+    "current_or_overlay_name": "draw_center_animation_tile_f5",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "draw center animation tile f5",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $e317-$e319; whole-source semantic read"
+  },
+  {
+    "pc": "$e31c",
+    "current_or_overlay_name": "draw_center_animation_tile_f9",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "draw center animation tile f9",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $e31c-$e31c; whole-source semantic read"
+  },
+  {
+    "pc": "$e328",
+    "current_or_overlay_name": "draw_effect_tile_with_offset",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "draw effect tile with offset",
+    "confidence": "M",
+    "evidence": "game.bpy:10812-10843"
+  },
+  {
+    "pc": "$e32e",
+    "current_or_overlay_name": "draw_center_animation_grid_offset_0",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "draw center animation grid offset 0",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $e32e-$e335; whole-source semantic read"
+  },
+  {
+    "pc": "$e336",
+    "current_or_overlay_name": "draw_center_animation_grid_offset_10",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "draw center animation grid offset 10",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $e336-$e33d; whole-source semantic read"
+  },
+  {
+    "pc": "$e33e",
+    "current_or_overlay_name": "draw_four_effect_tiles",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "draw four effect tiles",
+    "confidence": "H",
+    "evidence": "game.bpy:10844-10879"
+  },
+  {
+    "pc": "$e363",
+    "current_or_overlay_name": "initialize_tank_slot",
+    "reader_group": "tanks",
+    "one_line_meaning": "initialize tank slot",
+    "confidence": "M",
+    "evidence": "game.bpy:10880-11008"
+  },
+  {
+    "pc": "$e3b8",
+    "current_or_overlay_name": "configure_spawned_tank_slot",
+    "reader_group": "tanks",
+    "one_line_meaning": "configure spawned tank slot",
+    "confidence": "M",
+    "evidence": "game.bpy:11009-11156"
+  },
+  {
+    "pc": "$e409",
+    "current_or_overlay_name": "clear_bullet_states",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "clear bullet states",
+    "confidence": "H",
+    "evidence": "game.bpy:11157-11174"
+  },
+  {
+    "pc": "$e413",
+    "current_or_overlay_name": "clear_tank_states_and_flags",
+    "reader_group": "tanks",
+    "one_line_meaning": "clear tank states and flags",
+    "confidence": "H",
+    "evidence": "game.bpy:11175-11197"
+  },
+  {
+    "pc": "$e420",
+    "current_or_overlay_name": "merge_tank_state_low_nibble",
+    "reader_group": "tanks",
+    "one_line_meaning": "merge tank state low nibble",
+    "confidence": "H",
+    "evidence": "game.bpy:11198-11211"
+  },
+  {
+    "pc": "$e42b",
+    "current_or_overlay_name": "load_stage_parameters",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "load stage parameters",
+    "confidence": "H",
+    "evidence": "game.bpy:11212-11283"
+  },
+  {
+    "pc": "$e451",
+    "current_or_overlay_name": "input_to_direction",
+    "reader_group": "input_and_menu",
+    "one_line_meaning": "input to direction",
+    "confidence": "H",
+    "evidence": "game.bpy:11284-11307"
+  },
+  {
+    "pc": "$e604",
+    "current_or_overlay_name": "move_projectiles_and_apply_terrain_impact",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "move projectiles and apply terrain impact",
+    "confidence": "H",
+    "evidence": "game.bpy:11308-11387"
+  },
+  {
+    "pc": "$e693",
+    "current_or_overlay_name": "set_map_probe_and_tail_call_lookup",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "set map probe and tail call lookup",
+    "confidence": "H",
+    "evidence": "game.bpy:11388-11395"
+  },
+  {
+    "pc": "$e69a",
+    "current_or_overlay_name": "handle_projectile_map_collision",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "handle projectile map collision",
+    "confidence": "M",
+    "evidence": "game.bpy:11396-11557"
+  },
+  {
+    "pc": "$e70c",
+    "current_or_overlay_name": "resolve_projectile_tank_collisions",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "resolve projectile tank collisions",
+    "confidence": "H",
+    "evidence": "game.bpy:11558-11833"
+  },
+  {
+    "pc": "$e8be",
+    "current_or_overlay_name": "place_random_powerup",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "place random powerup",
+    "confidence": "H",
+    "evidence": "game.bpy:11834-11871"
+  },
+  {
+    "pc": "$e902",
+    "current_or_overlay_name": "powerup_coordinate_from_index",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "powerup coordinate from index",
+    "confidence": "H",
+    "evidence": "game.bpy:11872-11918"
+  },
+  {
+    "pc": "$e910",
+    "current_or_overlay_name": "resolve_projectile_projectile_collisions",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "resolve projectile projectile collisions",
+    "confidence": "H",
+    "evidence": "game.bpy:11919-11978"
+  },
+  {
+    "pc": "$e972",
+    "current_or_overlay_name": "check_powerup_pickup",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "check powerup pickup",
+    "confidence": "H",
+    "evidence": "game.bpy:11979-11991"
+  },
+  {
+    "pc": "$e97e",
+    "current_or_overlay_name": "dispatch_powerup_pickup",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "dispatch powerup pickup",
+    "confidence": "M",
+    "evidence": "game.bpy:11992-12061"
+  },
+  {
+    "pc": "$e9f0",
+    "current_or_overlay_name": "set_tank_effect_timer_10",
+    "reader_group": "tanks",
+    "one_line_meaning": "set tank effect timer 10",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $e9f0-$e9f4; whole-source semantic read"
+  },
+  {
+    "pc": "$e9f5",
+    "current_or_overlay_name": "set_global_pause_timer_10",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "set global pause timer 10",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $e9f5-$e9fa; whole-source semantic read"
+  },
+  {
+    "pc": "$e9fb",
+    "current_or_overlay_name": "start_timed_display_when_68_negative",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "start timed display when 68 negative",
+    "confidence": "M",
+    "evidence": "unit-map.json:indirect range $e9fb-$ea06; whole-source semantic read"
+  },
+  {
+    "pc": "$ea07",
+    "current_or_overlay_name": "promote_slot_attribute_60_to_80",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "promote slot attribute 60 to 80",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $ea07-$ea16; whole-source semantic read"
+  },
+  {
+    "pc": "$ea17",
+    "current_or_overlay_name": "clear_active_enemy_tanks",
+    "reader_group": "tanks",
+    "one_line_meaning": "clear active enemy tanks",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $ea17-$ea3d; whole-source semantic read"
+  },
+  {
+    "pc": "$ea3e",
+    "current_or_overlay_name": "increment_life_and_mark_life_display_dirty",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "increment life and mark life display dirty",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $ea3e-$ea45; whole-source semantic read"
+  },
+  {
+    "pc": "$ea48",
+    "current_or_overlay_name": "return_noop",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "return noop",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $ea48-$ea48; whole-source semantic read"
+  },
+  {
+    "pc": "$ea51",
+    "current_or_overlay_name": "reset_audio_state",
+    "reader_group": "audio",
+    "one_line_meaning": "reset audio state",
+    "confidence": "H",
+    "evidence": "game.bpy:12213-12281"
+  },
+  {
+    "pc": "$ea7e",
+    "current_or_overlay_name": "update_audio_sequences",
+    "reader_group": "audio",
+    "one_line_meaning": "update audio sequences",
+    "confidence": "M",
+    "evidence": "game.bpy:12282-13184"
+  },
+  {
+    "pc": "$ec0a",
+    "current_or_overlay_name": "audio_finish_event_and_decrement_duration",
+    "reader_group": "audio",
+    "one_line_meaning": "audio finish event and decrement duration",
+    "confidence": "M",
+    "evidence": "unit-map.json:indirect range $ec0a-$ec1e; whole-source semantic read"
+  },
+  {
+    "pc": "$ec21",
+    "current_or_overlay_name": "audio_merge_parameter_into_control_low6",
+    "reader_group": "audio",
+    "one_line_meaning": "audio merge parameter into control low6",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $ec21-$ec30; whole-source semantic read"
+  },
+  {
+    "pc": "$ec33",
+    "current_or_overlay_name": "audio_merge_parameter_into_control_high2",
+    "reader_group": "audio",
+    "one_line_meaning": "audio merge parameter into control high2",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $ec33-$ec42; whole-source semantic read"
+  },
+  {
+    "pc": "$ec45",
+    "current_or_overlay_name": "audio_merge_parameter_into_control_low4",
+    "reader_group": "audio",
+    "one_line_meaning": "audio merge parameter into control low4",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $ec45-$ec54; whole-source semantic read"
+  },
+  {
+    "pc": "$ec57",
+    "current_or_overlay_name": "audio_set_stream_byte_2",
+    "reader_group": "audio",
+    "one_line_meaning": "audio set stream byte 2",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $ec57-$ec5e; whole-source semantic read"
+  },
+  {
+    "pc": "$ec61",
+    "current_or_overlay_name": "audio_set_stream_byte_4",
+    "reader_group": "audio",
+    "one_line_meaning": "audio set stream byte 4",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $ec61-$ec68; whole-source semantic read"
+  },
+  {
+    "pc": "$ec6b",
+    "current_or_overlay_name": "audio_set_stream_byte_1",
+    "reader_group": "audio",
+    "one_line_meaning": "audio set stream byte 1",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $ec6b-$ec72; whole-source semantic read"
+  },
+  {
+    "pc": "$ec75",
+    "current_or_overlay_name": "audio_clear_modulation_counters",
+    "reader_group": "audio",
+    "one_line_meaning": "audio clear modulation counters",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $ec75-$ec7e; whole-source semantic read"
+  },
+  {
+    "pc": "$ec81",
+    "current_or_overlay_name": "audio_select_counter_lane_zero",
+    "reader_group": "audio",
+    "one_line_meaning": "audio select counter lane zero",
+    "confidence": "M",
+    "evidence": "unit-map.json:indirect range $ec81-$ec83; whole-source semantic read"
+  },
+  {
+    "pc": "$ec85",
+    "current_or_overlay_name": "audio_select_counter_lane_one_from_status",
+    "reader_group": "audio",
+    "one_line_meaning": "audio select counter lane one from status",
+    "confidence": "M",
+    "evidence": "unit-map.json:indirect range $ec85-$ec87; whole-source semantic read"
+  },
+  {
+    "pc": "$ec88",
+    "current_or_overlay_name": "audio_select_counter_lane_two",
+    "reader_group": "audio",
+    "one_line_meaning": "audio select counter lane two",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $ec88-$ec88; whole-source semantic read"
+  },
+  {
+    "pc": "$ec99",
+    "current_or_overlay_name": "audio_increment_stream_duration",
+    "reader_group": "audio",
+    "one_line_meaning": "audio increment stream duration",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $ec99-$eca2; whole-source semantic read"
+  },
+  {
+    "pc": "$eca5",
+    "current_or_overlay_name": "audio_load_stream_duration",
+    "reader_group": "audio",
+    "one_line_meaning": "audio load stream duration",
+    "confidence": "H",
+    "evidence": "unit-map.json:indirect range $eca5-$ecac; whole-source semantic read"
+  },
+  {
+    "pc": "$ecaf",
+    "current_or_overlay_name": "select_audio_sequence_pointer",
+    "reader_group": "audio",
+    "one_line_meaning": "select audio sequence pointer",
+    "confidence": "H",
+    "evidence": "game.bpy:13185-13213"
+  },
+  {
+    "pc": "$ecbe",
+    "current_or_overlay_name": "read_next_audio_sequence_byte",
+    "reader_group": "audio",
+    "one_line_meaning": "read next audio sequence byte",
+    "confidence": "H",
+    "evidence": "game.bpy:13214-13250"
+  },
+  {
+    "pc": "$ecd0",
+    "current_or_overlay_name": "dispatch_inline_audio_command",
+    "reader_group": "audio",
+    "one_line_meaning": "dispatch inline audio command",
+    "confidence": "H",
+    "evidence": "game.bpy:13251-13291"
+  },
+  {
+    "pc": "$f000",
+    "current_or_overlay_name": "load_stage_map",
+    "reader_group": "boot_flow_and_frame",
+    "one_line_meaning": "load stage map",
+    "confidence": "H",
+    "evidence": "game.bpy:13292-13363"
+  },
+  {
+    "pc": "$fdf5",
+    "current_or_overlay_name": "queue_vram_string_and_maybe_unwind",
+    "reader_group": "video_and_map",
+    "one_line_meaning": "queue vram string and maybe unwind",
+    "confidence": "M",
+    "evidence": "game.bpy:13364-13387"
+  },
+  {
+    "pc": "$fe03",
+    "current_or_overlay_name": "move_projectile_and_conditionally_merge_player_terrain_flags",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "Move one projectile, then in the signature-selected path merge player fire-button terrain flags for slots 0–1.",
+    "confidence": "H",
+    "evidence": "freeze-1/game.bpy:8040-8136"
+  },
+  {
+    "pc": "$fe11",
+    "current_or_overlay_name": "dispatch_tank_state",
+    "reader_group": "tanks",
+    "one_line_meaning": "dispatch tank state",
+    "confidence": "H",
+    "evidence": "game.bpy:13408-13413"
+  },
+  {
+    "pc": "$fe1f",
+    "current_or_overlay_name": "test_tank_fire_attribute",
+    "reader_group": "tanks",
+    "one_line_meaning": "test tank fire attribute",
+    "confidence": "H",
+    "evidence": "game.bpy:13414-13439"
+  },
+  {
+    "pc": "$fe2e",
+    "current_or_overlay_name": "select_table_byte_by_state_flags",
+    "reader_group": "shared_utility",
+    "one_line_meaning": "select table byte by state flags",
+    "confidence": "M",
+    "evidence": "game.bpy:13440-13489"
+  },
+  {
+    "pc": "$fe48",
+    "current_or_overlay_name": "map_fire_button_to_projectile_terrain_flags",
+    "reader_group": "projectiles_and_powerups",
+    "one_line_meaning": "Map the low fire-button value and signature byte to the terrain-flag bits returned in Y.",
+    "confidence": "H",
+    "evidence": "freeze-1/game.bpy:8040-8136"
+  },
+  {
+    "pc": "$ff65",
+    "current_or_overlay_name": "merge_pad_bits_into_tank_flags",
+    "reader_group": "tanks",
+    "one_line_meaning": "merge pad bits into tank flags",
+    "confidence": "M",
+    "evidence": "game.bpy:13574-13878"
+  }
+]

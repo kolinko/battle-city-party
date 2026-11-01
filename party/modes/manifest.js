@@ -1,0 +1,11 @@
+window.BC_MANIFEST=[
+  {file:'classic.js',ids:['classic','coop4']},
+  {file:'deathmatch.js',ids:['deathmatch','team-deathmatch','hot-potato']},
+  {file:'batch-a.js',ids:['boss-defender','eagle-hunt','zombies','king-of-hill']},
+  {file:'batch-b.js',ids:['rpg','roguelite','shop-rounds','gauntlet']},
+  {file:'batch-c.js',ids:['juggernaut','vip-escort','capture-eagle','last-brick']},
+  {file:'batch-d.js',ids:['mutators','sniper','tank-tag','builders']},
+  {file:'batch-e.js',ids:['infection','shared-lives','bounty','fog-of-war']},
+  {file:'story.js',ids:['story-westerplatte','story-warszawa','story-commander-k','story-lone-wolf','story-trek']},
+  {file:'duo.js',ids:['duo-tower-defense','duo-tandem','duo-convoy']}
+];

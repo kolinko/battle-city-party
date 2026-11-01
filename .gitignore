@@ -1,0 +1,10 @@
+rom/
+*.nes
+*.NES
+*.fds
+*.zip
+party/assets.js
+decomp-generated-history/
+scenario-out/
+__pycache__/
+.DS_Store

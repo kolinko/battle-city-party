@@ -1,0 +1,1101 @@
+{
+  "classification_source_sha256": "42323cb01d4f8c72589c39b768ada2e0eaeb57d0744b9aec5ecc6c08ba3fd5af",
+  "roles": {
+    "reset": {
+      "category": "platform_protocol",
+      "reason": "Boot/reset protocol, PPU readiness and initial stack setup; the remaining label/goto is local boot scaffolding, not a game-policy defect."
+    },
+    "run_transition_cleanup_calls": {
+      "category": "platform_protocol",
+      "reason": "Disables video, clears map memory, uploads it and restores video; a protocol coordinator, not NMI code itself."
+    },
+    "clear_input_when_base_state_armed": {
+      "category": "game_rule",
+      "reason": "The base-state condition explicitly decides when both players' held and edge inputs are cleared."
+    },
+    "initialize_score_slots_then_fall_through": {
+      "category": "game_rule",
+      "reason": "Initializes two score records and enters new-game initialization; the called byte-clear routine is technical."
+    },
+    "initialize_new_game_state": {
+      "category": "game_rule",
+      "reason": "Explicit lives, two-player and initial spawn-lane policy."
+    },
+    "update_gameplay": {
+      "category": "game_rule",
+      "reason": "Readable ordered frame orchestration; the policy is the sequence of occupancy, movement, fire and collision calls."
+    },
+    "set_palette_fade_phase_from_frame": {
+      "category": "game_rule",
+      "reason": "Frame phases choose the fade state through visible mask/equality conditions."
+    },
+    "initialize_stage_round": {
+      "category": "game_rule",
+      "reason": "Round setup explicitly initializes live player slots, enemy count, timers and stage-dependent spawn delay."
+    },
+    "configure_demo_mode_setup": {
+      "category": "game_rule",
+      "reason": "Demo setup explicitly selects demo layout and mode; PPU/text transport is called, not duplicated as CPU flag logic."
+    },
+    "main_game_loop": {
+      "category": "game_rule",
+      "reason": "Demo-exit control uses a named stack-abandon helper; its policy body does not itself contain raw pull operations."
+    },
+    "run_flag_0315_wait_transition": {
+      "category": "game_rule",
+      "reason": "High-score/transition timing waits on its own audio event flag; raw cursor/string pointers are display setup, not the quoted foreign carry chain."
+    },
+    "run_timed_text_draw_sequence": {
+      "category": "rendering_transport",
+      "reason": "A fixed timed text-layout sequence calling VRAM encoders; its dependency on indexed-tile animation is explicit, not local carry evidence."
+    },
+    "wait_for_frame_low_phase": {
+      "category": "platform_protocol",
+      "reason": "Waits for a frame-counter phase; no local carry chain or sprite selection exists in this body."
+    },
+    "animate_seven_step_sprite_scroll": {
+      "category": "game_rule",
+      "reason": "Advances the scroll coordinate until the visible terminal position; indexed-tile arithmetic lives in its callee."
+    },
+    "draw_indexed_tile_at_generic_coordinates": {
+      "category": "rendering_transport",
+      "reason": "Index-to-animation-tile asset mapping; local carry/a_value scaffolding exists here and is a technical asset-codec exception, not in every caller."
+    },
+    "run_flag_0318_wait_transition": {
+      "category": "game_rule",
+      "reason": "Game-over/transition wait ends on Start/Select or completed sound; fixed text transport is separate."
+    },
+    "refresh_controller_slots_from_target_probe": {
+      "category": "game_rule",
+      "reason": "Demo controller policy selects pickup versus priority-enemy targeting and updates held/pressed inputs explicitly."
+    },
+    "render_title_tank_tile": {
+      "category": "rendering_transport",
+      "reason": "Transfers title-cursor tile selection and position to the metatile renderer."
+    },
+    "move_title_tank_with_repeated_direction_input": {
+      "category": "game_rule",
+      "reason": "Explicit held-duration repeat threshold and edge-input direction handling, with cell movement in a named helper."
+    },
+    "clear_results_counts": {
+      "category": "game_rule",
+      "reason": "Clears the results counters; the loop and target array are visible and contain no foreign targeting expression."
+    },
+    "return_round_continuation_status": {
+      "category": "game_rule",
+      "reason": "Round continuation is decided from base state, remaining enemies and combined lives."
+    },
+    "wait_for_title_start_select_or_timeout": {
+      "category": "game_rule",
+      "reason": "Title-start policy still contains a direct pair of stack pulls before entering the mode-selection loop; this is local transport residue. Accepted under that named stack protocol boundary; local transport is disclosed rather than claimed absent."
+    },
+    "render_lives_counter_rows": {
+      "category": "game_rule",
+      "reason": "HUD policy visibly includes player two in demo/two-player mode and clamps spare lives; no old goto remains. Raw a= bindings are display transport."
+    },
+    "draw_player_status_text": {
+      "category": "game_rule",
+      "reason": "Player-two status-row inclusion is explicit; this body has no borrowed lives-clamp or goto residue."
+    },
+    "draw_stage_value_at_fixed_position": {
+      "category": "rendering_transport",
+      "reason": "Fixed stage-label and decimal-value layout through formatting and VRAM helpers."
+    },
+    "map_packed_index_to_text_coordinates": {
+      "category": "rendering_transport",
+      "reason": "Packed text index to column/row codec; stack and a_value intermediates are local technical encoding details."
+    },
+    "draw_d362_text_at_packed_index": {
+      "category": "rendering_transport",
+      "reason": "Calls the packed-coordinate codec and selects one fixed string pointer; callee arithmetic is not local evidence."
+    },
+    "draw_d36b_text_at_packed_index": {
+      "category": "rendering_transport",
+      "reason": "Calls the same packed-coordinate codec for a different fixed string pointer."
+    },
+    "draw_even_d362_text_indices": {
+      "category": "rendering_transport",
+      "reason": "Iterates the indexed text assets, including an explicit extra counter decrement for even indices."
+    },
+    "clamp_tank_position_to_playfield": {
+      "category": "game_rule",
+      "reason": "Visible playfield-boundary clamping of tank coordinates."
+    },
+    "draw_unpaused_frame_phase_sprites": {
+      "category": "game_rule",
+      "reason": "Pause/frame-bit condition controls the pause-text sprites; tile constants are an asset layout."
+    },
+    "draw_transition_sprite_pair": {
+      "category": "rendering_transport",
+      "reason": "Positions a two-part transition sprite using fixed tile offsets; no simulation rule is hidden."
+    },
+    "step_and_draw_transition_sprite": {
+      "category": "game_rule",
+      "reason": "Lifetime threshold and frame cadence explicitly control transition movement and rendering."
+    },
+    "initialize_map_render_workspace": {
+      "category": "platform_protocol",
+      "reason": "Seeds dimensions and cursor state for map-workspace initialization; the actual clearing protocol is a callee."
+    },
+    "choose_game_mode": {
+      "category": "game_rule",
+      "reason": "Mode-selection policy is readable, but its accepted-selection edge still exposes stack pulls and the final indirect jump-table handoff locally. Accepted under that named stack protocol boundary; local transport is disclosed rather than claimed absent."
+    },
+    "set_spawn_parameter_5_and_enter_stage_sequence": {
+      "category": "game_rule",
+      "reason": "Same explicit game/display policy as F. H gives the retained byte/phase/palette/footprint intermediate meaningful local names; all right-hand sides and instruction annotations are unchanged. This is legibility polish, not a new semantic transformation."
+    },
+    "set_spawn_parameter_7_and_enter_stage_sequence": {
+      "category": "game_rule",
+      "reason": "Sets the seven-slot spawn limit, initializes scores and calls the shared campaign; no local a_value echo or title ladder."
+    },
+    "set_spawn_parameter_7_and_enter_pregame_setup": {
+      "category": "game_rule",
+      "reason": "Construction-mode cursor and tile-selection policy is explicit but long; no borrowed a_value=5 or raw register read in this body."
+    },
+    "set_menu_tank_y_from_player_count": {
+      "category": "game_rule",
+      "reason": "Maps the player-count selection to the menu tank coordinate using a generic byte-shift helper."
+    },
+    "queue_stage_value_vram_update": {
+      "category": "rendering_transport",
+      "reason": "VRAM command construction has two direct post-call A/Y reads; this is local technical transport, not a gameplay policy branch."
+    },
+    "queue_status_vram_update": {
+      "category": "rendering_transport",
+      "reason": "Queues fixed status assets and nametable attribute bytes."
+    },
+    "queue_masked_status_vram_update": {
+      "category": "rendering_transport",
+      "reason": "Queues a masked status variant; bit operations encode map/attribute data for display."
+    },
+    "queue_status_vram_variant": {
+      "category": "rendering_transport",
+      "reason": "Queues the alternate status assets and packed attribute values."
+    },
+    "draw_two_fixed_text_rows": {
+      "category": "rendering_transport",
+      "reason": "Fixed two-row text emission; no game-branch decision in the routine."
+    },
+    "queue_playfield_tail_block_to_vram": {
+      "category": "rendering_transport",
+      "reason": "Uploads the remaining nametable attribute block and advances a word pointer; technical loop comparison echo remains locally."
+    },
+    "queue_32_byte_vram_write": {
+      "category": "rendering_transport",
+      "reason": "Copies or fills a 32-byte VRAM row; the length and terminator belong to the queue protocol."
+    },
+    "animate_constant_vram_rows_incrementing": {
+      "category": "rendering_transport",
+      "reason": "Fixed row-reveal animation using the VRAM row transport."
+    },
+    "animate_pointer_vram_rows_decrementing": {
+      "category": "rendering_transport",
+      "reason": "Inverse row-reveal animation using the same protocol."
+    },
+    "run_four_slot_counter_display_loop": {
+      "category": "game_rule",
+      "reason": "Per-class results tally and higher-total bonus policy are now visible; two empty else arms remain presentation clutter, not a foreign goto/flag chain."
+    },
+    "initialize_and_draw_status_screen": {
+      "category": "rendering_transport",
+      "reason": "Fixed results-screen text and number layout, with explicit optional player-two rows."
+    },
+    "apply_four_attribute_value_blocks": {
+      "category": "rendering_transport",
+      "reason": "Emits four fixed display blocks by calling a sprite helper; no local counter or branch residue."
+    },
+    "initialize_attribute_data_tables": {
+      "category": "rendering_transport",
+      "reason": "Literal attribute-table asset initialization, not game rules or the results-counter loop."
+    },
+    "set_attribute_value_and_emit_sprite_pair": {
+      "category": "rendering_transport",
+      "reason": "Sets a tile value and passes fixed coordinates to sprite transport."
+    },
+    "update_bonus_life_counters": {
+      "category": "game_rule",
+      "reason": "Extra life threshold and one-time latch are explicit for both players."
+    },
+    "reset_display_and_draw_common_screen": {
+      "category": "platform_protocol",
+      "reason": "Video disable/clear/upload/enable wrapper."
+    },
+    "draw_title": {
+      "category": "rendering_transport",
+      "reason": "Fixed title assets and score text layout; its selector-controlled unwind is an explicit callee dependency."
+    },
+    "repeat_attribute_update_for_frames": {
+      "category": "rendering_transport",
+      "reason": "Frame-duration display helper locally saves/restores its counter on the emulated stack; technical timing transport."
+    },
+    "vblank_interrupt": {
+      "category": "platform_protocol",
+      "reason": "NMI register/status preservation, OAM DMA, PPU updates, input/audio and counters; technical exception."
+    },
+    "random_byte": {
+      "category": "platform_protocol",
+      "reason": "Generic deterministic byte mixer plus preservation of caller X; slot is transport, not an input to the RNG arithmetic."
+    },
+    "wait_vblank_and_set_ppu_control": {
+      "category": "platform_protocol",
+      "reason": "Waits for vblank and writes the PPU control register."
+    },
+    "wait_vblank_and_disable_rendering": {
+      "category": "platform_protocol",
+      "reason": "Waits and disables PPU rendering with explicit hardware writes."
+    },
+    "clear_ram_0400_07ff": {
+      "category": "platform_protocol",
+      "reason": "Clears four pages of map RAM."
+    },
+    "initialize_game": {
+      "category": "platform_protocol",
+      "reason": "Boot/configuration initialization uses an explicit signature-comparison result; it contains no borrowed NMI line."
+    },
+    "copy_c040_config_to_0110": {
+      "category": "platform_protocol",
+      "reason": "Copies the ROM configuration signature to its RAM location."
+    },
+    "compare_0110_with_c040_config": {
+      "category": "platform_protocol",
+      "reason": "Compares configuration bytes and returns explicit 0/1."
+    },
+    "initialize_ppu_palettes": {
+      "category": "platform_protocol",
+      "reason": "Coordinates fixed and variable PPU palette uploads."
+    },
+    "load_palette_variant": {
+      "category": "platform_protocol",
+      "reason": "PPU palette address/data protocol with local register echoes, explicitly technical."
+    },
+    "load_fixed_sprite_palette": {
+      "category": "platform_protocol",
+      "reason": "Fixed sprite-palette upload to PPU registers."
+    },
+    "wait_for_vblank_flag": {
+      "category": "platform_protocol",
+      "reason": "Polls the PPU vblank status bit."
+    },
+    "encode_tile_coordinates_to_ppu_address": {
+      "category": "platform_protocol",
+      "reason": "Tile coordinates become a high/low PPU-address tuple; local stack and bit packing are address-codec details."
+    },
+    "queue_attribute_table_byte_update": {
+      "category": "platform_protocol",
+      "reason": "Captures the attribute byte/index result and appends an attribute-table command."
+    },
+    "update_attribute_quadrant_bits": {
+      "category": "platform_protocol",
+      "reason": "Quadrant mask and packed nametable attribute encoding."
+    },
+    "shift_attribute_value_and_or_base": {
+      "category": "platform_protocol",
+      "reason": "Shifts and replicates an attribute value; generic packed-attribute codec."
+    },
+    "poll_controllers": {
+      "category": "platform_protocol",
+      "reason": "Controller strobe/read protocol produces held and pressed bytes; the edge calculation is local and explicit."
+    },
+    "queue_ff_terminated_vram_string": {
+      "category": "platform_protocol",
+      "reason": "FF-terminated VRAM command transport with a RAM mirror write."
+    },
+    "queue_offset_ff_terminated_vram_string": {
+      "category": "platform_protocol",
+      "reason": "FF-terminated text transport optionally offsets eligible tiles."
+    },
+    "divide_xy_then_setup_vram_pointer": {
+      "category": "platform_protocol",
+      "reason": "Composes pixel-to-tile conversion with address-pointer setup using explicit returned locals."
+    },
+    "set_vram_pointer_from_tile_coordinates": {
+      "category": "platform_protocol",
+      "reason": "Explicit high/low tuple is stored as the address pointer; no mutable-Y ambiguity remains here."
+    },
+    "divide_xy_by_eight": {
+      "category": "platform_protocol",
+      "reason": "Generic division of byte coordinates by eight, returning both results."
+    },
+    "setup_attribute_mask_from_coordinates": {
+      "category": "platform_protocol",
+      "reason": "Sets up coordinate scratch and enters the quadrant-mask codec."
+    },
+    "compute_attribute_quadrant_mask": {
+      "category": "platform_protocol",
+      "reason": "Derives a packed quadrant mask from coordinate bits."
+    },
+    "test_cell_high_nibble_with_mask": {
+      "category": "platform_protocol",
+      "reason": "Reads the currently addressed cell and applies a high-nibble/quadrant mask."
+    },
+    "clear_cell_mask_and_queue_update": {
+      "category": "platform_protocol",
+      "reason": "Clears a cell's selected mask bits and delegates the VRAM queue update."
+    },
+    "clear_cell_mask_if_high_nibble_present": {
+      "category": "platform_protocol",
+      "reason": "Low-level cell codec conditionally clears mask bits only in the applicable packed-cell representation."
+    },
+    "set_cell_mask_if_high_nibble_present": {
+      "category": "platform_protocol",
+      "reason": "Companion packed-cell codec conditionally sets mask bits."
+    },
+    "write_pointed_cell_to_ppu": {
+      "category": "platform_protocol",
+      "reason": "Writes PPU address/data from the software pointer; a_value echoes are local protocol lowering."
+    },
+    "store_cell_and_queue_single_vram_update": {
+      "category": "platform_protocol",
+      "reason": "Writes a map cell and queues its single VRAM update."
+    },
+    "add_a_to_word_11_12": {
+      "category": "platform_protocol",
+      "reason": "Generic byte-pair pointer addition with carry propagation."
+    },
+    "repeat_d771_over_0400_to_07ff": {
+      "category": "platform_protocol",
+      "reason": "Full map-to-PPU upload through the cell writer and pointer incrementer."
+    },
+    "initialize_ram_and_clear_generated_blocks": {
+      "category": "platform_protocol",
+      "reason": "RAM/nametable workspace initialization has local post-call A/Y transport; this is not a gameplay decision."
+    },
+    "render_four_table_selected_parts": {
+      "category": "rendering_transport",
+      "reason": "Metatile asset expansion, attribute setup and four cell writes; direct X transport belongs to this technical codec."
+    },
+    "read_eight_ppu_bytes_and_process_bits": {
+      "category": "platform_protocol",
+      "reason": "Reads eight pattern bytes from PPU, then expands their bits into the map representation."
+    },
+    "process_consecutive_ff_source_entries": {
+      "category": "platform_protocol",
+      "reason": "Walks FF-terminated asset entries and delegates their pattern expansion."
+    },
+    "wait_next_frame": {
+      "category": "platform_protocol",
+      "reason": "Waits until the frame counter changes; no game rule or foreign carry chain."
+    },
+    "flush_vram_buffer": {
+      "category": "platform_protocol",
+      "reason": "VRAM byte-stream decoder writes PPU data; its local shared-tail goto is a protocol exception."
+    },
+    "scan_zero_page_to_zero_or_ff": {
+      "category": "platform_protocol",
+      "reason": "Scans a byte sequence for leading zeros/FF and adjusts the text pointer."
+    },
+    "configure_and_process_data_after_zero_prefix": {
+      "category": "platform_protocol",
+      "reason": "Configures a text pointer after its zero prefix, then calls the asset walker."
+    },
+    "compare_and_conditionally_copy_two_7byte_arrays": {
+      "category": "game_rule",
+      "reason": "High-score winner comparison/copy is explicit; decimal byte comparisons retain named intermediate difference values."
+    },
+    "add_seven_decimal_digits": {
+      "category": "game_rule",
+      "reason": "Seven-digit score update calls the source-owned decimal carry helper."
+    },
+    "initialize_score_increment_record": {
+      "category": "game_rule",
+      "reason": "Maps a score-increment code to decimal addend digits, including its special value-zero award."
+    },
+    "clear_seven_bytes_set_ff_sentinel": {
+      "category": "platform_protocol",
+      "reason": "Generic fixed-width byte record clear with FF sentinel; no award policy."
+    },
+    "store_value_as_tens_and_ones": {
+      "category": "platform_protocol",
+      "reason": "Generic binary-byte to decimal tens/ones formatter."
+    },
+    "emit_sprite": {
+      "category": "rendering_transport",
+      "reason": "OAM writer and priority attribute handling; its direct indexed Y access is local technical transport."
+    },
+    "emit_sprite_with_tile_plus_twice_a": {
+      "category": "rendering_transport",
+      "reason": "Tile offset and sprite-center adjustment codec."
+    },
+    "add_eight_times_a_to_tile_then_emit_pair": {
+      "category": "rendering_transport",
+      "reason": "Tile-stride multiplication followed by paired-sprite transport."
+    },
+    "emit_horizontal_sprite_pair": {
+      "category": "rendering_transport",
+      "reason": "Two-sprite layout preserving coordinates across the first emit."
+    },
+    "hide_unused_sprites": {
+      "category": "platform_protocol",
+      "reason": "OAM cleanup/hiding protocol with local register echoes."
+    },
+    "comparison_flags_to_signed_unit": {
+      "category": "platform_protocol",
+      "reason": "Generic signed-unit result from an explicit difference/nonnegative contract, not a hidden status-flag decision."
+    },
+    "update_0311_from_two_slot_idle_checks": {
+      "category": "game_rule",
+      "reason": "Engine-sound decision calls explicit driving predicates for each player."
+    },
+    "test_slot_no_directional_input_and_no_tank_state": {
+      "category": "game_rule",
+      "reason": "Driving predicate returns explicit 0/1 from held direction bits and tank state."
+    },
+    "tick_enemy_spawn": {
+      "category": "game_rule",
+      "reason": "Spawn delay, remaining enemies and free-slot search are visible game policy."
+    },
+    "apply_player_direction": {
+      "category": "game_rule",
+      "reason": "Player direction update has explicit cooldown/terrain guards, no-direction handling and tile snap; byte helpers are dependencies."
+    },
+    "return_from_player_direction_update": {
+      "category": "platform_protocol",
+      "reason": "An empty return continuation in the physical schedule, not a game rule."
+    },
+    "tick_tank_states": {
+      "category": "game_rule",
+      "reason": "Enemy-freeze and per-class/per-frame state-update cadence are explicit."
+    },
+    "tank_state_dispatch": {
+      "category": "jump_table_dispatch",
+      "reason": "Decodes the state class to a named-handler indirect table; no handler body is hidden here."
+    },
+    "decrement_tank_state_phase": {
+      "category": "game_rule",
+      "reason": "Tank phase/cooldown logic invokes the actual movement helper or advances its state class."
+    },
+    "maybe_retarget_aligned_tank": {
+      "category": "game_rule",
+      "reason": "Aligned-enemy random retarget decision and movement continuation are explicit."
+    },
+    "randomize_tank_direction_or_retarget": {
+      "category": "game_rule",
+      "reason": "Randomly chooses retargeting or clockwise/counterclockwise state changes."
+    },
+    "target_tank_zero_position_and_choose_state": {
+      "category": "game_rule",
+      "reason": "Targets player zero and stores the returned direction-state into the returned slot."
+    },
+    "target_secondary_player_position_and_choose_state": {
+      "category": "game_rule",
+      "reason": "Same visible targeting policy for player two."
+    },
+    "target_fixed_center_position_and_choose_state": {
+      "category": "game_rule",
+      "reason": "Selects the fixed center target and stores the returned steering state."
+    },
+    "map_target_tank_delta_to_direction_value": {
+      "category": "game_rule",
+      "reason": "Computes direction-table selection from signed target deltas and enemy/player random/frame policy."
+    },
+    "advance_tank_destruction_state": {
+      "category": "game_rule",
+      "reason": "Same explicit game/display policy as F. H gives the retained byte/phase/palette/footprint intermediate meaningful local names; all right-hand sides and instruction annotations are unchanged. This is legibility polish, not a new semantic transformation."
+    },
+    "set_transition_vector_and_reset_frame": {
+      "category": "game_rule",
+      "reason": "Initializes the round-transition sprite lifetime, position and frame counter."
+    },
+    "increment_tank_state_until_e0": {
+      "category": "game_rule",
+      "reason": "Advances the tank phase and explicitly finalizes state E0."
+    },
+    "increment_tank_state_and_finalize_phase": {
+      "category": "game_rule",
+      "reason": "Advances the spawn phase and calls tank configuration at its threshold."
+    },
+    "select_tank_action_from_timer_and_frame": {
+      "category": "game_rule",
+      "reason": "Spawn timer and frame phase select random motion or fixed target states through visible branches."
+    },
+    "dispatch_all_eight_tank_render_handlers": {
+      "category": "game_rule",
+      "reason": "Iterates tank slots and calls the sprite dispatcher; it has no local transform-state a_value chain."
+    },
+    "dispatch_tank_sprite_handler": {
+      "category": "jump_table_dispatch",
+      "reason": "Tank sprite state-class dispatch via a ROM asset-handler table."
+    },
+    "render_tank_from_state": {
+      "category": "rendering_transport",
+      "reason": "Passes tank state and position to the animation-tile codec; its local push/pull is coordinate/state preservation, not the callee's arithmetic."
+    },
+    "transform_state_nibble_to_tile_offset": {
+      "category": "rendering_transport",
+      "reason": "Actual local a_value/carry chain is a state-nibble to animation-asset offset codec; technical exception, not ten separate policy defects."
+    },
+    "emit_sprite_pair_with_a_plus_f1_tile": {
+      "category": "rendering_transport",
+      "reason": "Adds the fixed F1 tile-bank base and emits a pair; no local transform-state chain."
+    },
+    "render_tank_by_attribute_mode": {
+      "category": "game_rule",
+      "reason": "Visible attribute-mode choice between fixed and class-derived tank display; shifts are codec calls."
+    },
+    "render_tank_offset_effect": {
+      "category": "rendering_transport",
+      "reason": "Fixed offset-effect sprite wrapper; no local arithmetic scaffold."
+    },
+    "render_four_quadrant_tank_effect": {
+      "category": "rendering_transport",
+      "reason": "Four-quadrant layout consumes explicit position tuples from its preparation helper; no old bare X/Y read."
+    },
+    "prepare_tank_sprite_tile_and_position": {
+      "category": "rendering_transport",
+      "reason": "State-phase and quadrant index to sprite-tile asset mapping, returning coordinates explicitly."
+    },
+    "render_tank_body_with_frame_selection": {
+      "category": "game_rule",
+      "reason": "Same explicit game/display policy as F. H gives the retained byte/phase/palette/footprint intermediate meaningful local names; all right-hand sides and instruction annotations are unchanged. This is legibility polish, not a new semantic transformation."
+    },
+    "render_tank_state_offset_sprite": {
+      "category": "rendering_transport",
+      "reason": "State-phase absolute-offset to animation-tile mapping; the arithmetic is explicit asset decoding, not movement/collision policy."
+    },
+    "tick_projectile_motion": {
+      "category": "game_rule",
+      "reason": "Projectile slots dispatch their own motion state."
+    },
+    "bullet_state_dispatch": {
+      "category": "jump_table_dispatch",
+      "reason": "Projectile state-class dispatch, with handler bodies remaining named source routines."
+    },
+    "move_projectile_with_optional_second_step": {
+      "category": "game_rule",
+      "reason": "Modifier bit explicitly selects a second movement step."
+    },
+    "move_bullet_by_direction": {
+      "category": "game_rule",
+      "reason": "Projectile coordinates advance by the direction table through byte-shift helpers."
+    },
+    "decrement_projectile_state_phase": {
+      "category": "game_rule",
+      "reason": "Projectile impact phase decrements and transitions explicitly."
+    },
+    "spawn_projectile": {
+      "category": "game_rule",
+      "reason": "Launch policy calls position and modifier helpers after the primary-slot guard and optional player sound."
+    },
+    "dispatch_bullet_render_handlers": {
+      "category": "game_rule",
+      "reason": "Iterates all projectile render slots and delegates state selection."
+    },
+    "dispatch_bullet_render_state": {
+      "category": "jump_table_dispatch",
+      "reason": "Projectile render-state table transport."
+    },
+    "render_projectile_pair": {
+      "category": "rendering_transport",
+      "reason": "Projectile direction and position to paired-sprite emission, with local stack preservation."
+    },
+    "render_projectile_state_effect": {
+      "category": "rendering_transport",
+      "reason": "Projectile phase is passed to the same animation-tile codec as tanks; foreign codec lines are dependencies, not local evidence."
+    },
+    "player_fire_pressed": {
+      "category": "game_rule",
+      "reason": "Visible displaced-shot copy preserves state, position and modifier before clearing/reusing the primary slot."
+    },
+    "enemy_fire": {
+      "category": "game_rule",
+      "reason": "Enemy firing chance and active-state guard are explicit; the comparison echo is named difference, not hidden policy."
+    },
+    "mark_tank_occupied_map_cells": {
+      "category": "game_rule",
+      "reason": "Same explicit game/display policy as F. H gives the retained byte/phase/palette/footprint intermediate meaningful local names; all right-hand sides and instruction annotations are unchanged. This is legibility polish, not a new semantic transformation."
+    },
+    "set_map_cell_high_bit": {
+      "category": "platform_protocol",
+      "reason": "Generic map-cell high-bit update; the decision when to call it is in the occupancy routine."
+    },
+    "clear_tank_occupied_map_cells": {
+      "category": "game_rule",
+      "reason": "Clears exactly the cached occupancy quadrants indicated by each tank's stored flags."
+    },
+    "clear_map_cell_high_bit": {
+      "category": "platform_protocol",
+      "reason": "Generic map-cell high-bit clearing codec."
+    },
+    "update_powerup_lifetime_and_render": {
+      "category": "game_rule",
+      "reason": "Pickup blink/lifetime behavior is visible and calls a separate sprite-layout helper; no old goto tail remains."
+    },
+    "update_tank_flash_rendering": {
+      "category": "game_rule",
+      "reason": "Same explicit game/display policy as F. H gives the retained byte/phase/palette/footprint intermediate meaningful local names; all right-hand sides and instruction annotations are unchanged. This is legibility polish, not a new semantic transformation."
+    },
+    "update_round_transition_countdowns_and_dispatch": {
+      "category": "game_rule",
+      "reason": "Round countdown and visible animation-handler selection are explicit; raw indirect jump is the named-handler dispatch seam, not a foreign goto."
+    },
+    "draw_center_animation_tile_f1": {
+      "category": "rendering_transport",
+      "reason": "Fixed base-animation tile F1 emission; local a_value echo is technical asset transport."
+    },
+    "draw_center_animation_tile_f5": {
+      "category": "rendering_transport",
+      "reason": "Fixed base-animation tile F5 emission; local a_value echo is technical asset transport."
+    },
+    "draw_center_animation_tile_f9": {
+      "category": "rendering_transport",
+      "reason": "Fixed base-animation tile F9 emission, with no local a_value echo."
+    },
+    "draw_effect_tile_with_offset": {
+      "category": "rendering_transport",
+      "reason": "Adds the selected animation-bank offset to a tile; local accumulator echoes belong to this asset codec."
+    },
+    "draw_center_animation_grid_offset_0": {
+      "category": "rendering_transport",
+      "reason": "Chooses animation bank zero then calls the four-tile layout helper."
+    },
+    "draw_center_animation_grid_offset_10": {
+      "category": "rendering_transport",
+      "reason": "Chooses animation bank sixteen then calls the same layout helper."
+    },
+    "draw_four_effect_tiles": {
+      "category": "rendering_transport",
+      "reason": "Fixed four-tile center-effect layout; offset arithmetic is in its explicit callee."
+    },
+    "initialize_tank_slot": {
+      "category": "game_rule",
+      "reason": "Bonus-tank positions in the enemy count and spawn-lane policy are explicit disjunctions; no old goto remains."
+    },
+    "configure_spawned_tank_slot": {
+      "category": "game_rule",
+      "reason": "Stage/class script selects tank attributes, applies the E0 special case and merges existing flags."
+    },
+    "clear_bullet_states": {
+      "category": "game_rule",
+      "reason": "Clears all ten projectile state slots explicitly."
+    },
+    "clear_tank_states_and_flags": {
+      "category": "game_rule",
+      "reason": "Clears tank states and flags for eight slots."
+    },
+    "merge_tank_state_low_nibble": {
+      "category": "game_rule",
+      "reason": "Merges a named new state class with the existing low nibble."
+    },
+    "load_stage_parameters": {
+      "category": "game_rule",
+      "reason": "Selects stage enemy-count data with visible mode/wrap policy; table address shifts are generic helpers."
+    },
+    "input_to_direction": {
+      "category": "game_rule",
+      "reason": "Direction priority is expressed as successive high-bit results and explicit return values."
+    },
+    "move_projectiles_and_terrain_impact": {
+      "category": "game_rule",
+      "reason": "Movement/terrain policy performs the two visible edge probes and handles impacts; generic address codecs are dependencies."
+    },
+    "set_map_probe_and_tail_call_lookup": {
+      "category": "platform_protocol",
+      "reason": "Coordinate/scratch setup followed by the collision handler's physical tail seam; decision remains in the handler."
+    },
+    "handle_projectile_map_collision": {
+      "category": "game_rule",
+      "reason": "Visible base-hit, terrain class and clear-cell modifier rules select writes, sound and impact state."
+    },
+    "projectile_tank_hits": {
+      "category": "game_rule",
+      "reason": "Collision coordinator calls three actual game-policy helpers; those helpers are separately inventoried, not hidden by the 215 denominator."
+    },
+    "place_powerup": {
+      "category": "game_rule",
+      "reason": "Pickup placement/retry/type choice remains current source; redundant X entry parameter, RNG arguments and post-pickup X capture were removed by the independently proven patch. The generic RNG routine preserves actual machine X."
+    },
+    "powerup_coordinate_from_index": {
+      "category": "game_rule",
+      "reason": "Maps a random index to one of the permitted pickup coordinates via generic byte arithmetic helpers."
+    },
+    "projectile_overlaps": {
+      "category": "game_rule",
+      "reason": "Visible projectile-owner exclusions and strict axis-distance checks determine mutual shot removal."
+    },
+    "check_powerup_pickup": {
+      "category": "game_rule",
+      "reason": "Pickup existence/cooldown guards precede the collection dispatcher."
+    },
+    "powerup_dispatch": {
+      "category": "game_rule",
+      "reason": "Pickup eligibility, award and kind dispatch are explicit, but the handler handoff still exposes a local pair of stack pulls. Accepted under that named stack protocol boundary; local transport is disclosed rather than claimed absent."
+    },
+    "set_tank_effect_timer_10": {
+      "category": "game_rule",
+      "reason": "Shield/tank-effect timer value is explicit."
+    },
+    "set_global_pause_timer_10": {
+      "category": "game_rule",
+      "reason": "Enemy-freeze timer value is explicit."
+    },
+    "start_timed_display_when_68_negative": {
+      "category": "game_rule",
+      "reason": "Base-state guard enables the timed protective display state."
+    },
+    "promote_slot_attribute_60_to_80": {
+      "category": "game_rule",
+      "reason": "Player upgrade cap and attribute step are visible."
+    },
+    "clear_active_enemy_tanks": {
+      "category": "game_rule",
+      "reason": "Bomb effect selects active enemies, starts destruction and clears their attributes."
+    },
+    "increment_life_and_mark_life_display_dirty": {
+      "category": "game_rule",
+      "reason": "Life increment and its sound commands are explicit before the no-op continuation."
+    },
+    "return_noop": {
+      "category": "platform_protocol",
+      "reason": "Empty physical continuation; no simulation policy."
+    },
+    "audio_reset": {
+      "category": "audio_driver_exception",
+      "reason": "APU initialization and channel-state clearing; approved bytecode/hardware driver exception."
+    },
+    "audio_tick": {
+      "category": "audio_driver_exception",
+      "reason": "Actual APU register-writing bytecode interpreter; shared tails remain technical driver code."
+    },
+    "audio_finish_event_and_decrement_duration": {
+      "category": "audio_driver_exception",
+      "reason": "Audio event completion/duration handling and shared interpreter continuation; no caller's sound-selection rule is moved here."
+    },
+    "audio_merge_parameter_into_control_low6": {
+      "category": "audio_driver_exception",
+      "reason": "Audio stream parameter merge into control bits, then named interpreter continuation."
+    },
+    "audio_merge_parameter_into_control_high2": {
+      "category": "audio_driver_exception",
+      "reason": "Companion high-control-bit audio parameter merge."
+    },
+    "audio_merge_parameter_into_control_low4": {
+      "category": "audio_driver_exception",
+      "reason": "Audio control-nibble merge followed by stream continuation."
+    },
+    "audio_set_stream_byte_2": {
+      "category": "audio_driver_exception",
+      "reason": "Stores an interpreted audio parameter into stream byte two."
+    },
+    "audio_set_stream_byte_4": {
+      "category": "audio_driver_exception",
+      "reason": "Stores an interpreted audio parameter into stream byte four."
+    },
+    "audio_set_stream_byte_1": {
+      "category": "audio_driver_exception",
+      "reason": "Stores an interpreted audio parameter into stream byte one."
+    },
+    "audio_clear_modulation_counters": {
+      "category": "audio_driver_exception",
+      "reason": "Clears the audio modulation counters."
+    },
+    "audio_select_counter_lane_zero": {
+      "category": "audio_driver_exception",
+      "reason": "Audio loop-counter lane and duration dispatch, including local physical fallthrough scaffolding."
+    },
+    "audio_select_counter_lane_one_from_status": {
+      "category": "audio_driver_exception",
+      "reason": "Local BIT-style sign/overflow handling belongs to this audio bytecode lane, not to all audio callers."
+    },
+    "audio_select_counter_lane_two": {
+      "category": "audio_driver_exception",
+      "reason": "Audio lane-two counter comparison and duration continuation."
+    },
+    "audio_increment_stream_duration": {
+      "category": "audio_driver_exception",
+      "reason": "Increments the audio stream duration then resumes the interpreter."
+    },
+    "audio_load_stream_duration": {
+      "category": "audio_driver_exception",
+      "reason": "Reads and stores the audio stream duration then resumes the interpreter."
+    },
+    "select_audio_sequence_pointer": {
+      "category": "audio_driver_exception",
+      "reason": "Selects the audio sequence pointer from the event table."
+    },
+    "read_next_audio_sequence_byte": {
+      "category": "audio_driver_exception",
+      "reason": "Reads a byte from the active audio sequence and advances its cursor."
+    },
+    "inline_audio_dispatch": {
+      "category": "audio_driver_exception",
+      "reason": "Inline audio bytecode dispatch using its saved return-address table; explicit driver exception."
+    },
+    "load_stage_map": {
+      "category": "rendering_transport",
+      "reason": "Stage-layout nibble decoder and metatile upload, with visible stage wrap/demo selection at entry; raw tile cursor belongs to this asset transport."
+    },
+    "queue_vram_string_and_maybe_unwind": {
+      "category": "platform_protocol",
+      "reason": "Selector-gated VRAM string continuation/unwind; stack adjustment is a local control-protocol exception."
+    },
+    "move_projectile_and_conditionally_merge_player_terrain_flags": {
+      "category": "game_rule",
+      "reason": "Selector-gated projectile/terrain policy still exposes scratch/index stack preservation locally; not the old secondary-shot eligibility quote. Accepted under that named stack protocol boundary; local transport is disclosed rather than claimed absent."
+    },
+    "dispatch_tank_state": {
+      "category": "jump_table_dispatch",
+      "reason": "Thin named wrapper around the actual tank-state dispatcher, not itself an indirect-jump body."
+    },
+    "allows_secondary_projectile": {
+      "category": "game_rule",
+      "reason": "Secondary-shot class predicate and selector override are explicit source policy."
+    },
+    "select_table_byte_by_state_flags": {
+      "category": "rendering_transport",
+      "reason": "Selector-controlled palette-table choice; exact bank bytes are display assets."
+    },
+    "encode_fire_input_modifiers": {
+      "category": "game_rule",
+      "reason": "Fire-button-to-modifier policy is named, but its branches still use direct push/pull transport of the input byte. Accepted under that named stack protocol boundary; local transport is disclosed rather than claimed absent."
+    },
+    "merge_pad_bits_into_tank_flags": {
+      "category": "game_rule",
+      "reason": "Held fire bits invoke the modifier codec and merge its returned value into projectile state."
+    },
+    "pull_probe_inside_tank_x": {
+      "category": "game_rule",
+      "reason": "X-side collision probe is pulled one pixel inside when it reaches/exceeds the proposed position."
+    },
+    "pull_probe_inside_tank_y": {
+      "category": "game_rule",
+      "reason": "Y-side collision probe uses the corresponding explicit boundary condition."
+    },
+    "is_player_projectile": {
+      "category": "game_rule",
+      "reason": "Original slot-bit ownership convention for primary/displaced player projectiles."
+    },
+    "is_flying_projectile": {
+      "category": "game_rule",
+      "reason": "Names the active projectile-state class."
+    },
+    "projectile_belongs_to_player": {
+      "category": "game_rule",
+      "reason": "Names parity-based player ownership of primary and displaced shots."
+    },
+    "enemy_score_class": {
+      "category": "game_rule",
+      "reason": "Maps tank class bits to the scoring class; generic shift arithmetic is a dependency."
+    },
+    "byte_axis_distance": {
+      "category": "generic_byte_codec",
+      "reason": "Generic signed wrapped-byte distance codec, not the collision threshold policy."
+    },
+    "add_decimal_digit": {
+      "category": "generic_byte_codec",
+      "reason": "Generic single decimal digit/carry codec with explicit two-result contract."
+    },
+    "take_high_bit": {
+      "category": "generic_byte_codec",
+      "reason": "Generic byte high-bit extraction plus remaining-byte result."
+    },
+    "enemy_projectile_slots_reverse": {
+      "category": "game_rule",
+      "reason": "Names the enemy projectile iteration range 2 through 7."
+    },
+    "player_slots_reverse": {
+      "category": "game_rule",
+      "reason": "Names the two player slots."
+    },
+    "tank_slots_reverse": {
+      "category": "game_rule",
+      "reason": "Names all eight tank slots."
+    },
+    "projectile_slots_reverse": {
+      "category": "game_rule",
+      "reason": "Names all ten projectile slots including displaced player shots."
+    },
+    "play_stage_until_finished": {
+      "category": "game_rule",
+      "reason": "Actual stage-play phase: pause/input, simulation/render calls and explicit completion test."
+    },
+    "run_stage_campaign": {
+      "category": "game_rule",
+      "reason": "Actual campaign/menu/stage/results policy; long duplicated input ladder remains readable explicit control, not merely a helper label."
+    },
+    "is_active_tank": {
+      "category": "game_rule",
+      "reason": "Names the active tank-state interval."
+    },
+    "projectile_has_second_step": {
+      "category": "game_rule",
+      "reason": "Names the modifier bit governing extra movement."
+    },
+    "projectile_clears_cell": {
+      "category": "game_rule",
+      "reason": "Names the modifier bit governing full-cell terrain destruction."
+    },
+    "apply_projectile_traits": {
+      "category": "game_rule",
+      "reason": "Actual tank-class-to-projectile modifier policy; not generic lowering."
+    },
+    "shift_byte_left_2": {
+      "category": "generic_byte_codec",
+      "reason": "Generic byte shift retaining machine-visible intermediate values outside policy callers."
+    },
+    "shift_byte_left_4": {
+      "category": "generic_byte_codec",
+      "reason": "Generic four-bit byte shift codec."
+    },
+    "shift_byte_left_1": {
+      "category": "generic_byte_codec",
+      "reason": "Generic one-bit byte shift codec."
+    },
+    "shift_byte_right_1": {
+      "category": "generic_byte_codec",
+      "reason": "Generic right shift with explicit original low-bit intermediate."
+    },
+    "double_byte_sum": {
+      "category": "generic_byte_codec",
+      "reason": "Generic wrapped sum then doubling, with explicit intermediate overflow."
+    },
+    "shift_byte_left_3": {
+      "category": "generic_byte_codec",
+      "reason": "Generic three-bit byte shift codec."
+    },
+    "shift_byte_left_4_value": {
+      "category": "generic_byte_codec",
+      "reason": "Generic four-bit byte shift with a named materialized result."
+    },
+    "shift_byte_left_1_value": {
+      "category": "generic_byte_codec",
+      "reason": "Generic one-bit byte shift with a materialized result."
+    },
+    "shift_byte_left_2_value": {
+      "category": "generic_byte_codec",
+      "reason": "Generic two-bit byte shift with a materialized result."
+    },
+    "snap_to_tile_grid": {
+      "category": "generic_byte_codec",
+      "reason": "Coordinate-grid rounding codec; callers decide when snapping is allowed."
+    },
+    "shift_byte_right_2": {
+      "category": "generic_byte_codec",
+      "reason": "Generic two-bit byte right shift."
+    },
+    "shift_byte_right_3_value": {
+      "category": "generic_byte_codec",
+      "reason": "Generic three-bit right shift with a materialized result."
+    },
+    "shift_byte_right_3": {
+      "category": "generic_byte_codec",
+      "reason": "Generic three-bit byte right shift."
+    },
+    "shift_byte_right_4": {
+      "category": "generic_byte_codec",
+      "reason": "Generic high-nibble shift codec."
+    },
+    "shift_byte_right_4_value": {
+      "category": "generic_byte_codec",
+      "reason": "Generic high-nibble shift with a materialized result."
+    },
+    "shift_byte_right_5_value": {
+      "category": "generic_byte_codec",
+      "reason": "Generic five-bit right shift codec."
+    },
+    "shift_byte_left_3_value": {
+      "category": "generic_byte_codec",
+      "reason": "Generic three-bit left shift with a materialized result."
+    },
+    "shift_byte_right_1_value": {
+      "category": "generic_byte_codec",
+      "reason": "Generic one-bit right shift with a materialized result."
+    },
+    "high_nibble": {
+      "category": "generic_byte_codec",
+      "reason": "Generic packed-byte high-nibble mask."
+    },
+    "low_nibble": {
+      "category": "generic_byte_codec",
+      "reason": "Generic packed-byte low-nibble mask."
+    },
+    "snap_to_tile": {
+      "category": "generic_byte_codec",
+      "reason": "Generic tile-grid rounding expression."
+    },
+    "byte": {
+      "category": "generic_byte_codec",
+      "reason": "Generic modulo-256 codec."
+    },
+    "direction_of": {
+      "category": "game_rule",
+      "reason": "Names direction bits in a tank/projectile state."
+    },
+    "flying": {
+      "category": "game_rule",
+      "reason": "Constructs the flying projectile-state class."
+    },
+    "eight_pixels": {
+      "category": "generic_byte_codec",
+      "reason": "Generic wrapped eight-pixel scaling helper."
+    },
+    "is_player": {
+      "category": "game_rule",
+      "reason": "Names the primary player-slot predicate, distinct from displaced-projectile ownership."
+    },
+    "play_sound": {
+      "category": "platform_protocol",
+      "reason": "Writes a selected sound command; callers own which sound is chosen."
+    },
+    "set_projectile_modifier": {
+      "category": "game_rule",
+      "reason": "Named projectile modifier assignment, with selection policy in callers."
+    },
+    "shift_byte_left_three": {
+      "category": "generic_byte_codec",
+      "reason": "Generic three-bit shift with explicit overflow intermediates; same technical family as other shift helpers."
+    },
+    "place_projectile_ahead_of_tank": {
+      "category": "game_rule",
+      "reason": "Actual projectile-spawn position policy using direction tables and eight-pixel offset."
+    },
+    "abandon_stage_return_address": {
+      "category": "platform_protocol",
+      "reason": "Named physical stack-unwind operation called from stage-abandon policy."
+    },
+    "demo_pad_bits_toward_tank": {
+      "category": "game_rule",
+      "reason": "Targets a selected tank and maps the returned direction to controller bits."
+    },
+    "demo_pad_bits_toward_pickup": {
+      "category": "game_rule",
+      "reason": "Targets the pickup and maps direction to controller bits."
+    },
+    "demo_pad_bits_toward_priority_enemy": {
+      "category": "game_rule",
+      "reason": "Checks enemy candidates in explicit +2,+4,+3 order; not nearest-enemy search."
+    },
+    "move_title_tank_one_cell": {
+      "category": "game_rule",
+      "reason": "Actual menu/construction cursor movement by one table-defined cell."
+    },
+    "advance_tank_with_map_probes": {
+      "category": "game_rule",
+      "reason": "Actual tank movement and obstacle/retarget policy, including front and side probes; not a generic codec."
+    },
+    "draw_pickup_sprite": {
+      "category": "rendering_transport",
+      "reason": "Pickup coordinate-to-sprite transport, leaving lifetime/tile choice to its caller."
+    },
+    "blink_status_rows_while_countdown_ends": {
+      "category": "game_rule",
+      "reason": "Actual countdown/frame-bit choice between two status displays."
+    },
+    "resolve_enemy_shots_against_players": {
+      "category": "game_rule",
+      "reason": "Actual hostile-shot hit threshold, immunity and player-destruction policy."
+    },
+    "resolve_player_shots_against_enemies": {
+      "category": "game_rule",
+      "reason": "Actual bonus-tank, armor, scoring and enemy-destruction policy."
+    },
+    "resolve_friendly_fire": {
+      "category": "game_rule",
+      "reason": "Actual ownership/distance/immunity/stun policy for friendly fire."
+    },
+    "continue_audio_stream": {
+      "category": "audio_driver_exception",
+      "reason": "Shared audio bytecode interpreter body; local carry and dispatch scaffolding are the approved driver exception."
+    }
+  }
+}

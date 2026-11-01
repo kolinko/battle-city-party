@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Battle City, decompiled: readable source and a 4-player Party Edition</title>
+<meta name="description" content="Battle City (NES, 1985) decompiled into readable, executable Python-like source you can edit in the browser, plus a 4-player JavaScript Party Edition with 33 modes.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Battle City Party"><meta property="og:title" content="Battle City, decompiled"><meta property="og:description" content="The 1985 NES game as readable, executable source you can edit in the browser, plus a 4-player Party Edition with 33 modes."><meta property="og:url" content="__SITE__"><meta property="og:image" content="__SITE__og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Four toy tanks in a brick maze next to a sheet of Python-style code">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Battle City, decompiled"><meta name="twitter:description" content="The 1985 NES game as readable, executable source, plus a 4-player Party Edition with 33 modes."><meta name="twitter:image" content="__SITE__og.png">
+<link rel="canonical" href="__SITE__"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+:root{color-scheme:light;--paper:#faf7f0;--ink:#1f2328;--muted:#5d6472;--line:#e3e0d6;--blue:#1a75f5;--card:rgba(255,255,255,.78)}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#faf7f0,#f0f2fa);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+main{max-width:980px;margin:auto;padding:40px 22px 60px}a{color:var(--blue)}
+h1{font-size:clamp(32px,6vw,52px);line-height:1.05;letter-spacing:-1.5px;margin:0 0 14px}h1 span{color:var(--muted);font-weight:400}
+.lede{font-size:19px;color:#3a404b;max-width:720px;margin:0 0 28px}
+.hero{width:100%;height:auto;border-radius:16px;border:1px solid var(--line);display:block;margin:0 0 28px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0 0 34px}
+.card{background:var(--card);border:1px solid rgba(0,0,0,.06);border-radius:16px;padding:22px;display:flex;flex-direction:column}
+.card h2{margin:0 0 6px;font-size:22px}.card p{margin:0 0 12px;color:#3a404b}.card ul{margin:0 0 16px;padding-left:20px;color:#3a404b}
+.btn{margin-top:auto;display:inline-block;align-self:flex-start;background:var(--blue);color:#fff;text-decoration:none;font-weight:600;padding:11px 18px;border-radius:10px}
+h3{font-size:19px;margin:30px 0 8px}.note{background:#fff8e6;border:1px solid #f1dfae;border-radius:12px;padding:14px 16px}
+code{font:14px ui-monospace,SFMono-Regular,Menlo,monospace;background:rgba(0,0,0,.05);padding:1px 4px;border-radius:4px;overflow-wrap:anywhere}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+@media(max-width:720px){main{padding:26px 16px 40px}.cards{grid-template-columns:1fr}.lede{font-size:17px}}
+</style></head>
+<body><main>
+<h1>Battle City, <span>decompiled.</span></h1>
+<p class="lede">Namco's 1985 tank game for the NES, taken apart two ways: the cartridge's program turned into readable, executable Python-like source you can edit in the browser, and a JavaScript Party Edition for up to four players with 33 modes.</p>
+<img class="hero" src="og.png" width="1200" height="630" alt="Four toy tanks in a brick maze next to a sheet of Python-style code">
+<div class="cards">
+<section class="card"><h2>Party Edition</h2><p>A new engine built from what the decompilation revealed, using the original graphics and all 35 stages.</p><ul><li>Up to 4 players, keyboard and gamepads</li><li>Classic campaign, co-op, deathmatch, team modes</li><li>Five story campaigns and three two-player duos</li></ul><a class="btn" href="party/">Play the Party Edition</a></section>
+<section class="card"><h2>The source that plays</h2><p>The original game, running from decompiled source rather than from the cartridge's machine code.</p><ul><li>Read <code>game.py</code> function by function and follow its calls</li><li>Edit a function and recompile it in your browser</li><li>Play the result straight away, 1 or 2 players</li></ul><a class="btn" href="decomp/">Open the source editor</a></section>
+</div>
+<div class="note"><b>You need your own ROM.</b> Neither page includes any of the original game's data. The first time you open one, it asks for your copy of the Battle City ROM (NES/Famicom, <code>.nes</code>, 24,592 bytes). It is checked by its SHA-256 fingerprint, kept in your browser so you are asked only once, and never uploaded anywhere.</div>
+<h3>How it works</h3>
+<p>The decompilation turned the cartridge's 6502 machine code into <code>game.py</code>, a constrained, Python-style language. It is not CPython and not Namco's original source. A dedicated compiler, <code>bpyc.py</code>, compiles it for an interpreter that runs inside a NES emulator (jsnes) in place of the original processor code, and the result was checked against the real ROM frame by frame in recorded scenarios. The source editor runs that very compiler in your browser through Pyodide.</p>
+<p>The Party Edition is a separate, hand-written JavaScript engine. It takes the rules the decompilation exposed (spawn timing, enemy AI, scoring, the shovel and the eagle's ring) and reads the graphics, stage maps and enemy rosters from your ROM when the page starts. That is what makes four players possible: the original game only knows two.</p>
+<h3>Source code</h3>
+<p>Everything is on <a href="https://github.com/kolinko/battle-city-party">GitHub</a>, MIT-licensed for the project's own code. The README explains how to run it locally and how the two parts fit together.</p>
+<footer>A fan project. Not affiliated with or endorsed by Bandai Namco. Battle City is © 1985 Namco. No part of the original ROM is distributed here.</footer>
+</main></body></html>

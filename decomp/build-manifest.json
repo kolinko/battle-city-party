@@ -1,0 +1,19 @@
+{
+  "core": {
+    "game.py": "42323cb01d4f8c72589c39b768ada2e0eaeb57d0744b9aec5ecc6c08ba3fd5af",
+    "game.machine.json": "56091af7e55adfcae897d746d7ddabb31a220a950a6f51d532c7eb4a7bac4e9e",
+    "game.bpy": "424871ad350ebbbf0c9c6814da2126448c774a3748c046e985d5d285c77ac8bb",
+    "bpyc.py": "28f8c0830387138d73cb72d941b5f22f8b8365098ad2b729dd54dfc0eeb77b26",
+    "source-runtime.js": "5ac232c1832b35cee6419d57b77cdb34e6615137ff1a8405140df7f011a7f8f4",
+    "keep.json": "c423e45ccad9f43c4513744d560a5af02271c3dce625b15d9e379b126d0441bd",
+    "battle-city.nes (supplied by the player, not in this repository)": "463c6b44bf03c9bfc8c5d7995354f35ff6a8b23f8292bc558cf71c991870042e"
+  },
+  "stats": {
+    "routines": 215,
+    "slots": 5163,
+    "machine_lines": 2347,
+    "renamed_locals": 1668
+  },
+  "game_data_sha256": "b1656cbfaa4b6680adb88e927339bb4c6e42f5dc4317be951065a246df6947a9",
+  "source_is_input": "game.py + game.machine.json -> bpyc.build_text -> game.bpy; the ROM is read in the browser from the player's own file"
+}
