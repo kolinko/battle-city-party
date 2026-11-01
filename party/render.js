@@ -2,7 +2,7 @@
 'use strict';
 const G=window.BC_GFX,BC=window.BC;
 const BG_PAL=window.BC_ASSETS.bgPalettes;
-const WHITE=[0x0f,0x00,0x10,0x20],GREY=[0x0f,0x0c,0x10,0x20];
+const WHITE=BG_PAL[3],GREY=window.BC_ASSETS.spritePalettes[2];
 const OX=16,OY=16;
 function rgb(i){const c=G.PAL[i&63];return 'rgb('+c[0]+','+c[1]+','+c[2]+')';}
 function drawTank(ctx,g,t){

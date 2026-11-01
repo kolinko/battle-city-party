@@ -1,7 +1,7 @@
 (function(root){
 'use strict';
 const ROM_SIZE=24592,PRG_OFF=16,PRG_LEN=16384,CHR_OFF=16400,CHR_LEN=8192;
-const STAGE_BASE=0xF07A,STAGE_LEN=0x5B,STAGES=35,META_ATTR=0xDABB,META_TILES=0xDACB,COUNTS=0xE578,SCRIPT=0xE4EC,SPRITE_PAL=0xD555,BG_PAL=0xD575,POWERUP_KINDS=0xE8FA,ENEMY_SCORE=0xE8BA;
+const STAGE_BASE=0xF07A,STAGE_LEN=0x5B,STAGES=35,META_ATTR=0xDABB,META_TILES=0xDACB,COUNTS=0xE578,SCRIPT=0xE4EC,SPRITE_PAL=0xD555,BG_PAL=0xD575,AIM=0xE486,POWERUP_KINDS=0xE8FA,ENEMY_SCORE=0xE8BA;
 const B64='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 function b64encode(u8){
   let s='';
@@ -32,7 +32,7 @@ function extract(rom){
   }
   const bgPalettes=[];
   for(let i=0;i<4;i++){spritePalettes.push(cpu(SPRITE_PAL+i*4,4));bgPalettes.push(cpu(BG_PAL+i*4,4));}
-  return {chr:b64encode(chr),stages,metaAttr:cpu(META_ATTR,16),metaTiles,rosters,spritePalettes,bgPalettes,powerupKinds:cpu(POWERUP_KINDS,8),enemyScore:cpu(ENEMY_SCORE,4)};
+  return {chr:b64encode(chr),stages,metaAttr:cpu(META_ATTR,16),metaTiles,rosters,spritePalettes,bgPalettes,aimNormal:cpu(AIM,9).map(b=>b&3),aimAlt:cpu(AIM+9,9).map(b=>b&3),powerupKinds:cpu(POWERUP_KINDS,8),enemyScore:cpu(ENEMY_SCORE,4)};
 }
 root.BC_ROM_ASSETS={extract,b64encode};
 if(typeof module!=='undefined')module.exports=root.BC_ROM_ASSETS;

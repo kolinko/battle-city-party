@@ -3,7 +3,7 @@
 const BC=window.BC;
 const CLEAR_FRAMES=420,CLASSES=[0x80,0xa0,0xc0,0xe0];
 function romSpawnDelay(g,n){return 191-4*n-(g.players.length>1?20:0);}
-const ROM_AIM_NORMAL=[0,0,0,1,0,3,2,2,2],ROM_AIM_ALT=[1,0,3,1,0,3,1,2,3];
+const ROM_AIM_NORMAL=window.BC_ASSETS.aimNormal,ROM_AIM_ALT=window.BC_ASSETS.aimAlt;
 function sgn(pos,target){return target<pos?0:(target===pos?1:2);}
 function rnd(g){return Math.floor(g.random()*256);}
 function romSelect(g,t){const s=t.aiState,T=g.rules.spawnDelay-1,slow=Math.floor((g.frame-g.stageFrame0)/64);
