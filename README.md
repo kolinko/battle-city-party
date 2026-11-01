@@ -7,7 +7,11 @@ Namco's *Battle City* (NES/Famicom, 1985), taken apart two ways:
 
 **Play it:** https://battle-city.kolinko.eu/ · [Party Edition](https://battle-city.kolinko.eu/party/) · [Source editor](https://battle-city.kolinko.eu/decomp/)
 
-![Four toy tanks in a brick maze next to a sheet of Python-style code](og.png)
+| Party Edition: 4-player Team Deathmatch | Party Edition: a story campaign briefing |
+|---|---|
+| ![Team Deathmatch with four players](docs/screenshots/party-team-deathmatch.png) | ![The Last Commander, mission 1 briefing](docs/screenshots/party-story-briefing.png) |
+| **Source editor: the game running from `game.py`** | **Party Edition: the mode menu** |
+| ![The source editor with game.py and the running game](docs/screenshots/source-editor.png) | ![The Party Edition menu with 33 modes](docs/screenshots/party-menu.png) |
 
 ## Bring your own ROM
 
