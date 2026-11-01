@@ -8,3 +8,4 @@ decomp-generated-history/
 scenario-out/
 __pycache__/
 .DS_Store
+!decomp/pyodide-core/pyodide/python_stdlib.zip
